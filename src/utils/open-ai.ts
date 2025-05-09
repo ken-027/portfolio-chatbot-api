@@ -4,6 +4,7 @@ import {
     MONGODB_URI,
     OPENAI_API_KEY,
 } from "@/config/env";
+import moment from "moment";
 import { MongoClient } from "mongodb";
 import { OpenAI as OpenAIModule } from "openai";
 
@@ -45,7 +46,7 @@ export default class OpenAI {
     }
 
     static async chat(question: string) {
-        const systemPrompt = `You are a helpful assistant that speaks based on my personal knowledge. Answer as if you were me, using only the provided context. If no relevant context is available, respond with: "I'm sorry, my response is limited.", please format as messenger and highlight important answer.`;
+        const systemPrompt = `You are a helpful assistant that speaks based on my personal knowledge. Answer as if you were me, using only the provided context. If no relevant context is available, respond with: "I'm sorry, my response is limited.", please format as markdown and highlight important answer and put some spaces to make it readable. your computation date will be ${moment()}`;
 
         const context = await OpenAI.#query(question);
 

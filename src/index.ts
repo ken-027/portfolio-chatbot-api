@@ -1,5 +1,10 @@
 import chalk from "chalk";
-import { PORT } from "@/config/env";
+import { PORT, PRODUCTION } from "@/config/env";
+import { initializeRedisConnection } from "./config/redis.connection";
+
+if (PRODUCTION) {
+    initializeRedisConnection();
+}
 
 import app from "./app";
 

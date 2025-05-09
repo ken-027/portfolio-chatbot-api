@@ -14,10 +14,14 @@ export const PRODUCTION = NODE_ENV === "production";
 export const DB_URL = env.DB_URL as string;
 export const TIMEZONE = env.TIMEZONE as string;
 
+export const REDIS_URL = env.REDIS_URL as string;
+
 export const MONGODB_URI = env.MONGODB_URI as string;
 export const OPENAI_API_KEY = env.OPENAI_API_KEY as string;
 export const AI_MODEL = env.AI_MODEL as string;
 export const EMBEDDING_MODEL = env.EMBEDDING_MODEL as string;
+
+export const BASE_URL = PRODUCTION ? env.BASE_URL : env.BASE_URL_DEV;
 
 // pushover
 export const PUSHOVER_USER = env.PUSHOVER_USER as string;

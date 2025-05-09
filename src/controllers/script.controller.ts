@@ -17,6 +17,15 @@ export async function uploadVector(
 ) {
     await Embedder.cleanVector();
 
+    skills.unshift("My skills");
+    projects.unshift("My projects build and maintained");
+    services.unshift("My services offer as software developer");
+    experiences.unshift("My experiences and projects on each company");
+    contacts.unshift("My contacts");
+    certificates.unshift("My certificates");
+    hobbies.unshift("My hobbies besides my profession");
+    infos.unshift("Other that related to me");
+
     const saveSkills = Embedder.saveVectorDoc(skills);
     const saveProjects = Embedder.saveVectorDoc(projects);
     const saveServices = Embedder.saveVectorDoc(services);
