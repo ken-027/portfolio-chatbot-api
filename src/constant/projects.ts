@@ -54,7 +54,9 @@ type PROJECT_NAME =
     | "order_api"
     | "rustify"
     | "anime_dialog_translator"
-    | "py_to_any";
+    | "py_to_any"
+    | "portfolio_chatbot_api"
+    | "portfolio_terminal";
 
 const PROJECTS: Record<PROJECT_NAME, Project> = {
     casa: {
@@ -119,6 +121,38 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
         liveDemo: "https://kenneth-andales.github.io",
+    },
+    portfolio_terminal: {
+        category: "frontend",
+        title: "Terminal-Styled Portfolio",
+        thumbnailLink: `${BASE_URL}/images/projects/terminal-based-portfolio.png`,
+        description:
+            "A terminal-style portfolio website designed to showcase my skills, featured projects, and professional services with a nostalgic command-line interface.",
+        technologies: [
+            language.items[2],
+            frontend.items[0],
+            frontend.items[2],
+            frontend.items[3],
+        ],
+        githubRepo: "https://github.com/ken-027/portfolio",
+        liveDemo: "#terminal-styled",
+    },
+    portfolio_chatbot_api: {
+        category: "AI-powered",
+        title: "Portfolio Chatbot API",
+        thumbnailLink: `${BASE_URL}/images/projects/portfolio-chatbot-api.png`,
+        liveDemo: "https://portfolio-chatbot-api.vercel.app",
+        description:
+            "Built a simple chatbot API that combines OpenAI's language model with Retrieval-Augmented Generation (RAG), using MongoDB's Vector Search for embedding-based document retrieval to provide more relevant and context-aware responses.",
+        technologies: [
+            language.items[0],
+            language.items[2],
+            frontend.items[2],
+            frontend.items[3],
+            backend.items[0],
+            backend.items[1],
+        ],
+        githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
     },
     dashboard: {
         category: "fullstack",

@@ -21,7 +21,7 @@ const prefixRoute = "/api/v1";
 
 export const app = express();
 
-app.set("trust proxy", true);
+// app.set("trust proxy", true);
 app.use(helmet());
 app.use(cors({ origin: ALLOWED_ORIGINS }));
 // app.use(rateLimit);

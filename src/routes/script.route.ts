@@ -5,7 +5,7 @@ import { uploadVector } from "@/controllers/script.controller";
 const scriptRoutes = Router();
 
 scriptRoutes
-    .route("/script/upload-vector")
-    .post(scriptResourceLimit, uploadVector);
+    .route("/migration/refresh-vector")
+    .patch(scriptResourceLimit, uploadVector);
 
 export default scriptRoutes;

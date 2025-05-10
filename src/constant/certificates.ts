@@ -46,15 +46,15 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
         //   certificateLink: "https://www.udemy.com/",
     },
-    {
-        courseLink: "https://www.natcco.coop",
-        name: "Mid-Software Developer",
-        platform: "NATCCO",
-        dateCompleted: new Date("2025-03-25"),
-        description:
-            "NATCCO (National Confederation of Cooperatives) – the largest federation of cooperatives in the Philippines, providing training, financial services, and digital tools to empower community-based organizations",
-        platformLogo: `${BASE_URL}/images/companies/natcco-logo.svg`,
-    },
+    // {
+    //     courseLink: "https://www.natcco.coop",
+    //     name: "Mid-Software Developer",
+    //     platform: "NATCCO",
+    //     dateCompleted: new Date("2025-03-25"),
+    //     description:
+    //         "NATCCO (National Confederation of Cooperatives) – the largest federation of cooperatives in the Philippines, providing training, financial services, and digital tools to empower community-based organizations",
+    //     platformLogo: `${BASE_URL}/images/companies/natcco-logo.svg`,
+    // },
 ];
 
 export default CERTIFICATES;

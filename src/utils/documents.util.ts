@@ -70,7 +70,7 @@ export const experiences = EXPERIENCES.map(
             },
         );
 
-        return `Company: ${company}, Role: ${title}, Date Started: ${startDate}, End Date: ${endDate}, Descriptions: ${descriptions.join(
+        return `Company: ${company}, Role: ${title}, Date Started: ${startDate}, Date Ended: ${endDate}, Descriptions: ${descriptions.join(
             ", ",
         )}, Location: ${location}, Projects: ${response_project}`;
     },
