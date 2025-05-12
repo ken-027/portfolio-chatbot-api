@@ -7,9 +7,9 @@ export async function send(
     request: Request<never, unknown>,
     response: Response,
 ) {
-    const { message } = chat.parse(request.body);
+    const { message, history } = chat.parse(request.body);
 
-    const stream = await OpenAI.chat(message);
+    const stream = await OpenAI.chat(message, history);
 
     response.setHeader("Content-Type", "text/plain; charset=utf-8");
     response.setHeader("Transfer-Encoding", "chunked");

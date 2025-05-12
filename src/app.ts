@@ -7,7 +7,7 @@ import bodyParser from "body-parser";
 import NotFound from "@/middlewares/not-found.middleware";
 import cors from "cors";
 import { ALLOWED_ORIGINS } from "@/config/env";
-import helmet from "helmet";
+// import helmet from "helmet";
 // import morgan from "morgan";
 // import logger from "@/middlewares/logger.middleware";
 import passport from "passport";
@@ -22,9 +22,7 @@ const prefixRoute = "/api/v1";
 export const app = express();
 
 // app.set("trust proxy", true);
-app.use(helmet());
-app.use(cors({ origin: ALLOWED_ORIGINS }));
-// app.use(rateLimit);
+// app.use(helmet());
 
 app.use(express.static(path.join(__dirname, "../public")));
 // app.use(
@@ -33,6 +31,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 //     }),
 // );
 
+app.use("/api", cors({ origin: ALLOWED_ORIGINS }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(cookieParser());
