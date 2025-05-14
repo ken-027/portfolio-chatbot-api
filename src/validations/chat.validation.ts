@@ -1,4 +1,4 @@
-import { Chat } from "@/types/email";
+import { Chat } from "@/types";
 import { z, ZodTypeAny } from "zod";
 
 export const chat = z

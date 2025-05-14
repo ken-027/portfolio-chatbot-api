@@ -1,9 +1,5 @@
 import { BASE_URL } from "@/config/env";
-import SKILLS from "./skills";
-
-export interface Technology {
-    name: string;
-}
+import SKILLS, { ItemSkill } from "./skills";
 
 const language = SKILLS[0];
 const frontend = SKILLS[1];
@@ -17,7 +13,7 @@ export interface Project {
     thumbnailLink?: string;
     title: string;
     description: string;
-    technologies: Technology[];
+    technologies: ItemSkill[];
     githubRepo?: string;
     liveDemo?: string;
     screenshot?: string;
@@ -55,7 +51,7 @@ type PROJECT_NAME =
     | "rustify"
     | "anime_dialog_translator"
     | "py_to_any"
-    | "portfolio_chatbot_api"
+    | "portfolio_api"
     | "portfolio_terminal";
 
 const PROJECTS: Record<PROJECT_NAME, Project> = {
@@ -137,13 +133,13 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         githubRepo: "https://github.com/ken-027/portfolio",
         liveDemo: "#terminal-styled",
     },
-    portfolio_chatbot_api: {
+    portfolio_api: {
         category: "AI-powered",
-        title: "Portfolio Chatbot API",
+        title: "Portfolio API with Chatbot",
         thumbnailLink: `${BASE_URL}/images/projects/portfolio-chatbot-api.png`,
-        liveDemo: "https://portfolio-chatbot-api.vercel.app",
+        liveDemo: "https://portfolio-api.ksoftdev.site/api-docs",
         description:
-            "Built a simple chatbot API that combines OpenAI's language model with Retrieval-Augmented Generation (RAG), using MongoDB's Vector Search for embedding-based document retrieval to provide more relevant and context-aware responses.",
+            "Built a simple portfolio with chatbot API that combines OpenAI's language model with Retrieval-Augmented Generation (RAG), using MongoDB's Vector Search for embedding-based document retrieval to provide more relevant and context-aware responses.",
         technologies: [
             language.items[0],
             language.items[2],

@@ -1,5 +1,5 @@
 import rateLimitPackage from "express-rate-limit";
-import { PRODUCTION } from "../config/env";
+import { BASE_URL, PRODUCTION } from "../config/env";
 import { RedisStore } from "rate-limit-redis";
 import { redisClient } from "@/config/redis.connection";
 
@@ -26,7 +26,16 @@ export const modifyResourceLimit = rateLimitPackage({
 
 export const chatResourceLimit = rateLimitPackage({
     windowMs: 1000 * 60 * 60 * 24, // 24 hours
-    limit: PRODUCTION ? 10 : 100,
+    limit: (req) => {
+        let limit = PRODUCTION ? 10 : 100;
+        const { origin } = req.headers;
+
+        if (origin === BASE_URL) {
+            limit = 1;
+        }
+
+        return limit;
+    },
     standardHeaders: true,
     legacyHeaders: false,
     skipFailedRequests: true,
@@ -52,6 +61,22 @@ export const scriptResourceLimit = rateLimitPackage({
               sendCommand: (...args: string[]) => redisClient.sendCommand(args),
           })
         : undefined,
+});
+
+export const emailResourceLimit = rateLimitPackage({
+    windowMs: 1000 * 60 * 60 * 24, // 24 hours
+    limit: 3,
+    standardHeaders: true,
+    legacyHeaders: false,
+    store: PRODUCTION
+        ? new RedisStore({
+              sendCommand: (...args: string[]) => redisClient.sendCommand(args),
+          })
+        : undefined,
+    message: {
+        message:
+            "⚠️ Email request limit reached for today. Please try again tomorrow",
+    },
 });
 
 export default rateLimit;
