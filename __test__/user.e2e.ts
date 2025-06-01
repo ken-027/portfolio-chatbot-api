@@ -46,7 +46,7 @@ describe("/api/v1/portfolio", () => {
 
     it("should return years and months of experience", async () => {
         const res = await request(app).get(
-            "/api/v1/portfolio/experience/years-of-experience",
+            "/api/v1/portfolio/experiences/years-of-experience",
         );
 
         expect(res.statusCode).toBe(200);
