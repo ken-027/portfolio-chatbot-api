@@ -26,7 +26,7 @@ jobs:
         run: vercel link --yes --token ${{ secrets.VERCEL_TOKEN }}
 
       - name: Print vercel linked
-        run: cat ./vercel/project.json
+        run: cat ../vercel/project.json
 
       - name: 🚀 Deploy to Vercel
         run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --yes
