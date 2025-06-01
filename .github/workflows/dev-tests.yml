@@ -6,7 +6,7 @@ on:
       - dev
 
 jobs:
-  deploy:
+  TESTING_ENDPOINTS:
     runs-on: ubuntu-latest
 
     steps:
