@@ -26,7 +26,6 @@ jobs:
         run: |
           vercel link --yes \
             --project ${{ secrets.VERCEL_PROJECT_NAME }} \
-            --org ${{ secrets.VERCEL_ORG_ID }} \
             --token ${{ secrets.VERCEL_TOKEN }}
 
       - name: Print Vercel link info
