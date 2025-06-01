@@ -176,12 +176,12 @@ const SKILLS: Skill[] = [
                 proficiency: "exploring",
                 icon: `${BASE_URL}/icons/kubernetes.svg`,
             },
-            {
-                name: "Jenkins",
-                level: 3,
-                proficiency: "exploring",
-                icon: `${BASE_URL}/icons/jenkins.svg`,
-            },
+            // {
+            //     name: "Jenkins",
+            //     level: 3,
+            //     proficiency: "exploring",
+            //     icon: `${BASE_URL}/icons/jenkins.svg`,
+            // },
             {
                 name: "Terraform",
                 level: 3,
