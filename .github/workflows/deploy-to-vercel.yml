@@ -24,6 +24,4 @@ jobs:
 
       - name: 🚀 Deploy to Vercel
         run: |
-          vercel --token ${{ secrets.VERCEL_TOKEN }} \
-                 --project-id ${{ secrets.VERCEL_PROJECT_ID }} \
-                 --prod --confirm
+          vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --confirm
