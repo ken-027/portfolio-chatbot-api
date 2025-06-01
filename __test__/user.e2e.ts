@@ -43,4 +43,14 @@ describe("/api/v1/portfolio", () => {
         expect(res.statusCode).toBe(200);
         expect(res.body.certificates.length).toBeGreaterThan(0);
     });
+
+    it("should return years and months of experience", async () => {
+        const res = await request(app).get(
+            "/api/v1/portfolio/experiences/years-of-experience",
+        );
+
+        expect(res.statusCode).toBe(200);
+        const keys = Object.keys(res.body);
+        expect(keys.includes("years") || keys.includes("months")).toBe(true);
+    });
 });
