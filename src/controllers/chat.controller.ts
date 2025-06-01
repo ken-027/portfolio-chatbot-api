@@ -1,6 +1,7 @@
-import { Request, Response } from "express";
+import { Response } from "express";
 import { chat } from "@/validations/chat.validation";
-import OpenAI from "@/utils/open-ai";
+import OpenAI from "@/utils/ai/open-ai";
+import { SessionMessage, SessionRequest } from "@/types";
 
 /**
  * @swagger
@@ -21,12 +22,6 @@ import OpenAI from "@/utils/open-ai";
  *               message:
  *                 type: string
  *                 example: "What service do you offer?"
- *               history:
- *                 type: array
- *                 description: Array of past messages for context.
- *                 items:
- *                   type: string
- *                   example: ""
  *     responses:
  *       200:
  *         description: Return answered from the question
@@ -35,21 +30,36 @@ import OpenAI from "@/utils/open-ai";
  *             schema:
  *               type: string
  */
-export async function send(
-    request: Request<never, unknown>,
-    response: Response,
-) {
-    const { message, history } = chat.parse(request.body);
+export async function send(request: SessionRequest, response: Response) {
+    let reply = "";
+    const { message } = chat.parse(request.body);
 
-    const stream = await OpenAI.chat(message, history);
+    const history: SessionMessage[] = request.session.messages || [];
 
-    response.setHeader("Content-Type", "text/plain; charset=utf-8");
-    response.setHeader("Transfer-Encoding", "chunked");
+    const openai = new OpenAI();
 
-    for await (const chunk of stream) {
-        const content = chunk.choices[0]?.delta?.content;
-        if (content) response.write(content);
-    }
+
+    await openai.chat(message, history);
+    reply = await openai.stream(response);
+
+    history.push({ content: message, role: "user" });
+    history.push({ content: reply, role: "assistant" });
+
+    request.session.messages = history;
 
     response.end();
+}
+
+export async function store(request: SessionRequest, response: Response) {
+    request.session.messages ??= [];
+
+    request.session.save((err) => {
+        if (err) {
+            console.error("Failed to save session:", err);
+            return response.status(500).end("Session error");
+        }
+        response.end(); // ✅ Only call res.end() after session save
+    });
+
+    response.status(201).json({ status: "stored" });
 }

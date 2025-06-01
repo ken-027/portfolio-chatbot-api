@@ -53,7 +53,7 @@ export const chatResourceLimit = rateLimitPackage({
 
 export const scriptResourceLimit = rateLimitPackage({
     windowMs: 1000 * 60 * 60 * 24, // 24 hours
-    limit: PRODUCTION ? 2 : 100,
+    limit: PRODUCTION ? 5 : 100,
     standardHeaders: true,
     legacyHeaders: false,
     store: PRODUCTION

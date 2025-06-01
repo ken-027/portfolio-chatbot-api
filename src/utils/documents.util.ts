@@ -3,13 +3,14 @@ import CONTACTS from "@/constant/contacts";
 import EXPERIENCES from "@/constant/experiences";
 import HOBBIES from "@/constant/hobbies";
 import INFO from "@/constant/info";
-import PROJECTS, { Project } from "@/constant/projects";
+import PROJECTS from "@/constant/projects";
 import SERVICES from "@/constant/services";
 import SKILLS from "@/constant/skills";
+import { Project } from "@/types";
 
 export const skills = SKILLS.map((skill) => {
     const items = skill.items
-        .map((item) => `${item.name} (${item.proficiency}/10)`)
+        .map((item) => `${item.name} (${item.proficiency})`)
         .join(", ");
     return `${skill.name}: ${items}`;
 });

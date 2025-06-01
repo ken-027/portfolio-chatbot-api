@@ -5,7 +5,8 @@ import { uploadVector } from "@/controllers/script.controller";
 const scriptRoutes = Router();
 
 scriptRoutes
-    .route("/migration/refresh-vector")
+    .route("/knowledge-base")
     .patch(scriptResourceLimit, uploadVector);
+
 
 export default scriptRoutes;

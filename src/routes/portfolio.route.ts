@@ -10,13 +10,13 @@ import {
 
 const portfolioRoutes = Router();
 
-portfolioRoutes.route("/portfolio/experiences").get(experiences);
+portfolioRoutes.route("/experiences").get(experiences);
 portfolioRoutes
-    .route("/portfolio/experiences/years-of-experience")
+    .route("/experiences/years-of-experience")
     .get(getTotalYearsExperience);
-portfolioRoutes.route("/portfolio/services").get(services);
-portfolioRoutes.route("/portfolio/certificates").get(certificates);
-portfolioRoutes.route("/portfolio/projects").get(projects);
-portfolioRoutes.route("/portfolio/skills").get(skills);
+portfolioRoutes.route("/services").get(services);
+portfolioRoutes.route("/certificates").get(certificates);
+portfolioRoutes.route("/projects").get(projects);
+portfolioRoutes.route("/skills").get(skills);
 
 export default portfolioRoutes;

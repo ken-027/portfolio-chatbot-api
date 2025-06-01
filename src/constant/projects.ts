@@ -1,60 +1,19 @@
 import { BASE_URL } from "@/config/env";
-import SKILLS, { ItemSkill } from "./skills";
+import SKILLS from "./skills";
+import { ItemSkill, Project, ProjectName } from "@/types";
 
-const language = SKILLS[0];
-const frontend = SKILLS[1];
-const backend = SKILLS[2];
-const fullstack = SKILLS[3];
-const tools = SKILLS[4];
+const frontend = SKILLS[0].items;
+const backend = SKILLS[1].items;
+const database = SKILLS[2].items;
+// const devops = SKILLS[3].items;
+const tools = SKILLS[4].items;
 
-export type Category = "fullstack" | "frontend" | "backend" | "AI-powered";
+const getSkillByName = (name: string, skills: ItemSkill[]) =>
+    (skills.find(
+        ({ name: _name }) => name.toLowerCase() === _name.toLowerCase(),
+    ) as ItemSkill) || [];
 
-export interface Project {
-    thumbnailLink?: string;
-    title: string;
-    description: string;
-    technologies: ItemSkill[];
-    githubRepo?: string;
-    liveDemo?: string;
-    screenshot?: string;
-    category: Category;
-}
-
-export const CATEGORIES: Category[] = [
-    "frontend",
-    "backend",
-    "fullstack",
-    "AI-powered",
-];
-
-type PROJECT_NAME =
-    | "casa"
-    | "casa_api"
-    | "fixed_asset"
-    | "portfolio"
-    | "dashboard"
-    | "job_posting"
-    | "invoice_crud"
-    | "wiwo"
-    | "libre"
-    | "educat"
-    | "agency_match"
-    | "trabook"
-    | "e_commerce"
-    | "mta"
-    | "llda"
-    | "csrm"
-    | "csrm_api"
-    | "ema"
-    | "recipe_api"
-    | "order_api"
-    | "rustify"
-    | "anime_dialog_translator"
-    | "py_to_any"
-    | "portfolio_api"
-    | "portfolio_terminal";
-
-const PROJECTS: Record<PROJECT_NAME, Project> = {
+const PROJECTS: Record<ProjectName, Project> = {
     casa: {
         category: "frontend",
         title: "EkoopBanker Plus CASA V3 (UI)",
@@ -62,16 +21,16 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A core banking system that handles banking transactions and generates financial reports.",
         technologies: [
-            language.items[0],
-            language.items[2],
-            frontend.items[0],
-            frontend.items[3],
-            frontend.items[2],
-            fullstack.items[0],
-            tools.items[5],
-            tools.items[6],
+            getSkillByName("html", frontend),
+            getSkillByName("typescript", frontend),
+            getSkillByName("css", frontend),
+            getSkillByName("react js", frontend),
+            getSkillByName("next js", backend),
+            getSkillByName("redux toolkit", tools),
+            getSkillByName("socket.io", backend),
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_CASA_V3.pdf`,
+        type: "company",
     },
     casa_api: {
         category: "backend",
@@ -80,28 +39,30 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A core banking system that handles banking transactions and generates financial reports.",
         technologies: [
-            language.items[2],
-            backend.items[0],
-            backend.items[1],
-            backend.items[2],
-            tools.items[1],
-            tools.items[6],
+            getSkillByName("typescript", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("express js", backend),
+            getSkillByName("sql server", database),
+            getSkillByName("socket.io", backend),
+            getSkillByName("crystal report", tools),
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_CASA_V3.pdf`,
+        type: "company",
     },
     fixed_asset: {
-        category: "fullstack",
+        category: "backend",
         title: "EkoopBanker Plus Accounting V2",
         thumbnailLink: `${BASE_URL}/images/projects/accounting-thumbnail.png`,
         description:
             "An accounting system that manages fixed asset transactions and generates detailed reports for asset management.",
         technologies: [
-            language.items[5],
-            backend.items[2],
-            fullstack.items[3],
-            tools.items[1],
+            getSkillByName("csharp", backend),
+            getSkillByName("asp.net", backend),
+            getSkillByName("sql server", database),
+            getSkillByName("crystal report", tools),
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_ACCOUNTING_V2.pdf`,
+        type: "company",
     },
     portfolio: {
         category: "frontend",
@@ -110,13 +71,15 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple portfolio website that showcases my experiences, projects, and services",
         technologies: [
-            language.items[2],
-            frontend.items[0],
-            frontend.items[2],
-            frontend.items[3],
+            getSkillByName("typescript", frontend),
+            getSkillByName("css", frontend),
+            getSkillByName("html", frontend),
+            getSkillByName("react js", frontend),
+            getSkillByName("tailwind css", frontend),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
         liveDemo: "https://kenneth-andales.github.io",
+        type: "personal",
     },
     portfolio_terminal: {
         category: "frontend",
@@ -125,30 +88,31 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A terminal-style portfolio website designed to showcase my skills, featured projects, and professional services with a nostalgic command-line interface.",
         technologies: [
-            language.items[2],
-            frontend.items[0],
-            frontend.items[2],
-            frontend.items[3],
+            getSkillByName("typescript", frontend),
+            getSkillByName("css", frontend),
+            getSkillByName("html", frontend),
+            getSkillByName("react js", frontend),
+            getSkillByName("tailwind css", frontend),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
         liveDemo: "#terminal-styled",
+        type: "personal",
     },
     portfolio_api: {
-        category: "AI-powered",
+        category: "backend",
         title: "Portfolio API with Chatbot",
         thumbnailLink: `${BASE_URL}/images/projects/portfolio-chatbot-api.png`,
         liveDemo: "https://portfolio-api.ksoftdev.site/api-docs",
         description:
-            "Built a simple portfolio with chatbot API that combines OpenAI's language model with Retrieval-Augmented Generation (RAG), using MongoDB's Vector Search for embedding-based document retrieval to provide more relevant and context-aware responses.",
+            "Built a simple portfolio with chatbot API that combines OpenAI's frontend model with Retrieval-Augmented Generation (RAG), using MongoDB's Vector Search for embedding-based document retrieval to provide more relevant and context-aware responses.",
         technologies: [
-            language.items[0],
-            language.items[2],
-            frontend.items[2],
-            frontend.items[3],
-            backend.items[0],
-            backend.items[1],
+            getSkillByName("typescript", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("express js", backend),
         ],
         githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
+        type: "personal",
+        aiPowered: true,
     },
     dashboard: {
         category: "fullstack",
@@ -157,33 +121,36 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "An e-commerce dashboard for managing inventory items, enabling seamless tracking, updating, and organization of products.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            language.items[4],
-            frontend.items[0],
-            frontend.items[4],
-            frontend.items[2],
-            backend.items[4],
-            fullstack.items[1],
+            getSkillByName("css", frontend),
+            getSkillByName("html", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("jquery", frontend),
+            getSkillByName("php", backend),
+            getSkillByName("laravel", backend),
+            getSkillByName("maria db", database),
         ],
         githubRepo: "https://github.com/ken-027/laravel-ecommerce-admin",
+        type: "freelance",
     },
     rustify: {
-        category: "AI-powered",
+        category: "fullstack",
         title: "Rustify",
         thumbnailLink: `${BASE_URL}/images/projects/rustify.png`,
         liveDemo: "https://rustify-sigma.vercel.app",
         description:
             "A simple conversion tool for converting js/ts code to rust code using Anthropic AI.",
         technologies: [
-            language.items[0],
-            language.items[2],
-            frontend.items[3],
-            frontend.items[2],
-            backend.items[0],
-            fullstack.items[0],
+            getSkillByName("html", frontend),
+            getSkillByName("typescript", frontend),
+            getSkillByName("react js", frontend),
+            getSkillByName("tailwind css", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("next js", backend),
         ],
         githubRepo: "https://github.com/ken-027/rustify",
+        type: "personal",
+        aiPowered: true,
     },
     job_posting: {
         category: "fullstack",
@@ -192,16 +159,16 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple job posting site that allows users to create, manage, and track job listings.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            language.items[4],
-            frontend.items[0],
-            frontend.items[4],
-            frontend.items[2],
-            backend.items[4],
-            fullstack.items[1],
+            getSkillByName("html", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("jquery", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("php", backend),
+            getSkillByName("laravel", backend),
+            getSkillByName("maria db", database),
         ],
         githubRepo: "https://github.com/ken-027/laravelfindeasyjob",
+        type: "personal",
     },
     invoice_crud: {
         category: "fullstack",
@@ -210,16 +177,16 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple CRUD application for efficiently managing and processing invoice.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            language.items[4],
-            frontend.items[0],
-            frontend.items[4],
-            frontend.items[2],
-            backend.items[3],
-            fullstack.items[1],
+            getSkillByName("html", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("jquery", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("php", backend),
+            getSkillByName("laravel", backend),
+            getSkillByName("mysql", database),
         ],
         githubRepo: "https://github.com/ken-027/laravelinvoicecrud",
+        type: "personal",
     },
     wiwo: {
         category: "frontend",
@@ -228,13 +195,15 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            frontend.items[2],
-            frontend.items[3],
+            getSkillByName("html", frontend),
+            getSkillByName("css", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("react js", frontend),
+            getSkillByName("tailwind css", frontend),
         ],
         githubRepo: "https://github.com/ken-027/wiwosite",
         liveDemo: "https://kenneth-andales.github.io/wilson-works/",
+        type: "freelance",
     },
     libre: {
         category: "frontend",
@@ -243,14 +212,14 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
         technologies: [
-            language.items[0],
-            language.items[1],
-            language.items[3],
-            frontend.items[2],
-            frontend.items[3],
+            getSkillByName("html", frontend),
+            getSkillByName("sass", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/libre-site",
         liveDemo: "https://kenneth-andales.github.io/libre/",
+        type: "freelance",
     },
     educat: {
         category: "frontend",
@@ -259,13 +228,14 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
         technologies: [
-            language.items[0],
-            language.items[1],
-            language.items[3],
-            frontend.items[2],
+            getSkillByName("html", frontend),
+            getSkillByName("sass", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/educat-landing",
         liveDemo: "https://kenneth-andales.github.io/educat/",
+        type: "personal",
     },
     agency_match: {
         category: "frontend",
@@ -274,13 +244,14 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
         technologies: [
-            language.items[0],
-            language.items[1],
-            language.items[3],
-            frontend.items[2],
+            getSkillByName("html", frontend),
+            getSkillByName("sass", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/agency-match",
         liveDemo: "https://kenneth-andales.github.io/agency-match/",
+        type: "personal",
     },
     trabook: {
         category: "frontend",
@@ -289,20 +260,26 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
         technologies: [
-            language.items[0],
-            language.items[1],
-            language.items[3],
-            frontend.items[2],
+            getSkillByName("html", frontend),
+            getSkillByName("sass", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/trabook",
         liveDemo: "https://kenneth-andales.github.io/trabook/",
+        type: "personal",
     },
     e_commerce: {
         category: "frontend",
         title: "Buyback E-commerce Website",
         description:
             "An e-commerce site that allows customers to sell their old devices, with the option to check if their device is listed on the platform before selling.",
-        technologies: [language.items[0], language.items[4], frontend.items[4]],
+        technologies: [
+            getSkillByName("html", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("php", backend),
+        ],
+        type: "freelance",
     },
     mta: {
         category: "fullstack",
@@ -310,15 +287,16 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A government website for the Department of Social Welfare and Development (DSWD) that facilitates booking and approval of travel for minors.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            language.items[4],
-            frontend.items[0],
-            frontend.items[1],
-            frontend.items[4],
-            backend.items[4],
-            fullstack.items[2],
+            getSkillByName("html", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("jquery", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("php", backend),
+            getSkillByName("codeigniter", backend),
+            getSkillByName("maria db", database),
         ],
+        type: "company",
     },
     llda: {
         category: "fullstack",
@@ -326,15 +304,16 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "A government website for the Laguna Lake Development Authority (LLDA) that handles the approval process and certification for activities in the Laguna region.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            language.items[4],
-            frontend.items[0],
-            frontend.items[1],
-            frontend.items[4],
-            backend.items[4],
-            fullstack.items[2],
+            getSkillByName("html", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("jquery", frontend),
+            getSkillByName("bootstrap", frontend),
+            getSkillByName("php", backend),
+            getSkillByName("codeigniter", backend),
+            getSkillByName("maria db", database),
         ],
+        type: "company",
     },
     csrm: {
         category: "frontend",
@@ -342,18 +321,23 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "An internal customer service system designed to efficiently manage customer interactions, inquiries, and support requests.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            frontend.items[0],
-            frontend.items[1],
+            getSkillByName("html", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("css", frontend),
+            getSkillByName("jquery", frontend),
         ],
+        type: "company",
     },
     csrm_api: {
         category: "backend",
         title: "Customer Service Record Management System (API)",
         description:
             "An internal customer service system designed to efficiently manage customer interactions, inquiries, and support requests.",
-        technologies: [language.items[4], backend.items[3]],
+        technologies: [
+            getSkillByName("php", backend),
+            getSkillByName("mysql", database),
+        ],
+        type: "company",
     },
     ema: {
         category: "fullstack",
@@ -361,48 +345,63 @@ const PROJECTS: Record<PROJECT_NAME, Project> = {
         description:
             "An e-commerce platform for managing merchant products, enabling seamless product listing, updates, and inventory tracking.",
         technologies: [
-            language.items[0],
-            language.items[3],
-            frontend.items[0],
-            frontend.items[1],
-            language.items[4],
-            backend.items[3],
+            getSkillByName("html", frontend),
+            getSkillByName("javascript", frontend),
+            getSkillByName("css", frontend),
+            getSkillByName("jquery", frontend),
+            getSkillByName("php", backend),
+            getSkillByName("mysql", database),
         ],
+        type: "company",
     },
-    recipe_api: {
-        category: "backend",
-        title: "Recipe API",
-        thumbnailLink: `${BASE_URL}/images/projects/recipe-api.png`,
-        description:
-            "A simple CRUD application for managing recipes, instructions, and ingredients.",
-        technologies: [language.items[4], backend.items[3], fullstack.items[1]],
-        githubRepo: "https://github.com/ken-027/laravel-recipe-api",
-    },
-    order_api: {
-        category: "backend",
-        title: "Order API",
-        thumbnailLink: `${BASE_URL}/images/projects/order-api.png`,
-        description: "A simple authentication and CRUD application for orders.",
-        technologies: [language.items[4], backend.items[3], fullstack.items[1]],
-        githubRepo: "https://github.com/ken-027/laravel-orderapi",
-    },
+    // recipe_api: {
+    //     category: "backend",
+    //     title: "Recipe API",
+    //     thumbnailLink: `${BASE_URL}/images/projects/recipe-api.png`,
+    //     description:
+    //         "A simple CRUD application for managing recipes, instructions, and ingredients.",
+    //     technologies: [
+    //         getSkillByName("php", backend),
+    //         getSkillByName("laravel", backend),
+    //         getSkillByName("mysql", database),
+    //     ],
+    //     githubRepo: "https://github.com/ken-027/laravel-recipe-api",
+    //     type: "personal",
+    // },
+    // order_api: {
+    //     category: "backend",
+    //     title: "Order API",
+    //     thumbnailLink: `${BASE_URL}/images/projects/order-api.png`,
+    //     description: "A simple authentication and CRUD application for orders.",
+    //     technologies: [
+    //         getSkillByName("php", backend),
+    //         getSkillByName("laravel", backend),
+    //         getSkillByName("mysql", database),
+    //     ],
+    //     githubRepo: "https://github.com/ken-027/laravel-orderapi",
+    //     type: "personal",
+    // },
     anime_dialog_translator: {
-        category: "AI-powered",
+        category: "fullstack",
         title: "Anime Audio Translator",
         thumbnailLink: `${BASE_URL}/images/projects/anime-audio-translator.png`,
         description:
             "Translate Japanese anime audio into English and Filipino (Tagalog) using Gradio, OpenAI and HuggingFace open-source models running on google colab.",
-        technologies: [language.items[6]],
+        technologies: [getSkillByName("python", backend)],
         githubRepo: "https://github.com/ken-027/anime-dialog-translator",
+        type: "personal",
+        aiPowered: true,
     },
     py_to_any: {
-        category: "AI-powered",
+        category: "fullstack",
         title: "Python Code to Any",
         thumbnailLink: `${BASE_URL}/images/projects/code_conversion.png`,
         description:
-            "A simple code conversion tool that converts Python code to any programming language like cpp, javascript and php using openai and anthropic",
-        technologies: [language.items[6]],
+            "A simple code conversion tool that converts Python code to any programming frontend like cpp, javascript and php using openai and anthropic",
+        technologies: [getSkillByName("python", backend)],
         githubRepo: "https://github.com/ken-027/py-to-any",
+        type: "personal",
+        aiPowered: true,
     },
 };
 

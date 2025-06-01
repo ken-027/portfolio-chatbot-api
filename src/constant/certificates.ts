@@ -1,15 +1,5 @@
 import { BASE_URL } from "@/config/env";
-
-export interface Certificate {
-    name: string;
-    platform: string;
-    platformLogo?: string;
-    dateCompleted: Date | "ongoing";
-    description: string;
-    certificateLink?: string;
-    certificateImage?: string;
-    courseLink?: string;
-}
+import { Certificate } from "@/types";
 
 const CERTIFICATES: Certificate[] = [
     {
@@ -40,11 +30,13 @@ const CERTIFICATES: Certificate[] = [
             "https://www.udemy.com/share/104Tz63@7P1To3EQcAXMXxYDRpGYDQbhoUKPzgjok3XU6cJRKaSrO5RGltZ_dGX2tAKtAv5UCw==",
         name: "DevOps",
         platform: "Udemy",
-        dateCompleted: "ongoing",
+        dateCompleted: new Date("2025-05-31"),
         description:
             "Comprehensive training focused on core DevOps tools and practices. Gained hands-on experience with &lt;strong&gt;AWS&lt;/strong&gt;, &lt;strong&gt;Linux&lt;/strong&gt; system administration, &lt;strong&gt;shell scripting&lt;/strong&gt;, &lt;strong&gt;Jenkins&lt;/strong&gt;, &lt;strong&gt;Ansible&lt;/strong&gt;, GitOps workflows, &lt;strong&gt;Docker&lt;/strong&gt;, &lt;strong&gt;Kubernetes&lt;/strong&gt;, and &lt;strong&gt;Terraform&lt;/strong&gt;. Built a strong foundation for CI/CD, infrastructure automation, and cloud-native development.",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        //   certificateLink: "https://www.udemy.com/",
+        certificateLink:
+            "https://www.udemy.com/certificate/UC-0f82967f-c0f2-4abf-a24b-7486388a0d21/",
+        certificateImage: `${BASE_URL}/images/certificates/devops-certificate.jpg`,
     },
     // {
     //     courseLink: "https://www.natcco.coop",

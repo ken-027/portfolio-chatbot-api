@@ -7,7 +7,7 @@ import { emailResourceLimit } from "@/middlewares/rate-limiter.middleware";
 const emailRoutes = Router();
 
 emailRoutes
-    .route("/email/send")
+    .route("/send")
     .post(validateRequest(sendEmail, "body"), emailResourceLimit, send);
 
 export default emailRoutes;

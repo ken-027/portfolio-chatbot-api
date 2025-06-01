@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import NotFound from "@/middlewares/not-found.middleware";
 import cors from "cors";
-import { ALLOWED_ORIGINS, PRODUCTION } from "@/config/env";
+import { ALLOWED_ORIGINS, PRODUCTION, SESSION_SECRET } from "@/config/env";
 // import helmet from "helmet";
 // import morgan from "morgan";
 // import logger from "@/middlewares/logger.middleware";
@@ -16,30 +16,70 @@ import scriptRoutes from "./routes/script.route";
 import fs from "fs";
 import path from "path";
 import portfolioRoutes from "./routes/portfolio.route";
+import session from "express-session";
+import connectPgSimple from "connect-pg-simple";
+import { pool } from "@/config/db.connection";
 
-// @ts-expect-error @ts-ignore
-import swaggerUI from "swagger-ui-express";
+// import swaggerUI from "swagger-ui-express";
 import swaggerSpec from "./swagger";
 
 import emailRoutes from "./routes/email.route";
-
 const prefixRoute = "/api/v1";
 
 export const app = express();
 
-// app.set("trust proxy", true);
+const sessionStore = connectPgSimple(session);
+
+app.set("trust proxy", true);
+app.use(
+    session({
+        store: new sessionStore({
+            pool,
+            tableName: "chat_sessions",
+            createTableIfMissing: true,
+            pruneSessionInterval: 60 * 60, // 1 hour
+        }),
+        secret: SESSION_SECRET,
+        resave: false,
+        saveUninitialized: true,
+        cookie: { secure: PRODUCTION, maxAge: 60 * 60 * 1000 }, // 1 hours
+    }),
+);
 // app.use(helmet());
 app.use(express.static(path.join(__dirname, "../public")));
 // app.use(
+
 //     morgan(NODE_ENV === "production" ? "combined" : "dev", {
 //         stream: logger(),
 //     }),
 // );
 
+// app.use(
+//     "/api-docs",
+//     swaggerUI.serve,
+//     swaggerUI.setup(
+//         PRODUCTION
+//             ? JSON.parse(
+//                   fs.readFileSync(
+//                       path.join(__dirname, "./swagger.json"),
+//                       "utf-8",
+//                   ),
+//               )
+//             : swaggerSpec,
+//         {
+//             customSiteTitle: `Portfolio API Documentation`,
+//             customCss: ".swagger-ui .topbar { display: none }",
+//         },
+//     ),
+// );
+
 app.use(
-    "/api-docs",
-    swaggerUI.serve,
-    swaggerUI.setup(
+    "/swagger-ui",
+    express.static(path.join(__dirname, "node_modules", "swagger-ui-dist")),
+);
+
+app.get("/swagger.json", (_req, res) => {
+    res.json(
         PRODUCTION
             ? JSON.parse(
                   fs.readFileSync(
@@ -48,17 +88,21 @@ app.use(
                   ),
               )
             : swaggerSpec,
-    ),
-);
-app.use("/api", cors({ origin: ALLOWED_ORIGINS }));
+    );
+});
+
+app.get("/api-docs", (_req, res) => {
+    res.sendFile(path.join(__dirname, "./templates/swagger.html"));
+});
+app.use("/api", cors({ origin: ALLOWED_ORIGINS, credentials: true }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(cookieParser());
 
-app.use(prefixRoute, chatRoutes);
-app.use(prefixRoute, scriptRoutes);
-app.use(prefixRoute, portfolioRoutes);
-app.use(prefixRoute, emailRoutes);
+app.use(`${prefixRoute}/chat`, chatRoutes);
+app.use(`${prefixRoute}/script`, scriptRoutes);
+app.use(`${prefixRoute}/portfolio`, portfolioRoutes);
+app.use(`${prefixRoute}/email`, emailRoutes);
 
 app.all("*", NotFound);
 app.use(errorHandler);

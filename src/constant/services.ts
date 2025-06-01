@@ -1,10 +1,5 @@
 import { BASE_URL } from "@/config/env";
-
-interface Service {
-    title: string;
-    description: string;
-    image: string;
-}
+import { Service } from "@/types";
 
 const SERVICES: Service[] = [
     {
@@ -42,6 +37,12 @@ const SERVICES: Service[] = [
         description:
             "Collaborate across frontend/backend teams to ship features end-to-end—clear Git workflows, commits, and documentation included.",
         image: `${BASE_URL}/images/services/team.svg`,
+    },
+    {
+        title: "AI Integration",
+        description:
+            "Integrate AI tools like chatbots, recommendation systems, and data insights into your app for smarter functionality.",
+        image: `${BASE_URL}/images/services/ai-integration.svg`,
     },
 ];
 

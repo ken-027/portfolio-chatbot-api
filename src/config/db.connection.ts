@@ -1,8 +1,14 @@
-import postgres from "postgres";
-import { drizzle } from "drizzle-orm/postgres-js";
+import { Pool } from "pg";
 import { DB_URL } from "./env";
+import { drizzle } from "drizzle-orm/node-postgres";
 
-const queryClient = postgres(DB_URL);
-const db = drizzle(queryClient);
+export const pool = new Pool({
+    connectionString: DB_URL,
+    ssl: {
+        rejectUnauthorized: false,
+    },
+});
+
+const db = drizzle({ client: pool });
 
 export default db;

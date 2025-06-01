@@ -1,10 +1,32 @@
-import { getUsers } from "../src/controllers/user.controller";
+import {
+    skills,
+    projects,
+    certificates,
+} from "../src/controllers/portfolio.controller";
 import { mockRequest, mockResponse } from "../__mocks__/request.mock";
 
-// TODO: fix this mocking test
-describe("getUsers", () => {
-    it("should return list of registered user", () => {
-        getUsers(mockRequest, mockResponse).then((data) => console.log(data));
+describe("skills", () => {
+    it("should return list of skills", () => {
+        // @ts-expect-error @ts-ignore
+        skills(mockRequest, mockResponse).then((data) => console.log(data));
+        expect(mockResponse.json).toHaveBeenCalled();
+    });
+});
+
+describe("projects", () => {
+    it("should return list of projects", () => {
+        // @ts-expect-error @ts-ignore
+        projects(mockRequest, mockResponse).then((data) => console.log(data));
+        expect(mockResponse.json).toHaveBeenCalled();
+    });
+});
+
+describe("certificates", () => {
+    it("should return list of certificates", () => {
+        // @ts-expect-error @ts-ignore
+        certificates(mockRequest, mockResponse).then((data) =>
+            console.log(data),
+        );
         expect(mockResponse.json).toHaveBeenCalled();
     });
 });

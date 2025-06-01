@@ -330,6 +330,9 @@ export async function skills(
     _request: Request<never, unknown>,
     response: Response,
 ) {
-    const skills = SKILLS;
+    const skills = SKILLS.map(({ items, name }) => ({
+        name,
+        items: items.sort(({ level }, { level: levelB }) => levelB - level),
+    }));
     response.json({ skills });
 }

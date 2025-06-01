@@ -1,184 +1,240 @@
 import { BASE_URL } from "@/config/env";
-
-export interface ItemSkill {
-    name: string;
-    proficiency: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-    icon: string;
-}
-
-export interface Skill {
-    name: string;
-    items: ItemSkill[];
-}
+import { Skill } from "@/types";
 
 const SKILLS: Skill[] = [
     {
-        name: "Programming & Markup Languages",
+        name: "Frontend",
         items: [
             {
                 name: "HTML",
-                proficiency: 8,
+                level: 8,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/html.svg`,
             },
             {
+                name: "CSS",
+                level: 7,
+                proficiency: "confident",
+                icon: `${BASE_URL}/icons/css.svg`,
+            },
+            {
                 name: "Sass",
-                proficiency: 5,
+                level: 5,
+                proficiency: "comfortable",
                 icon: `${BASE_URL}/icons/sass.svg`,
             },
             {
+                name: "Javascript",
+                level: 8,
+                proficiency: "confident",
+                icon: `${BASE_URL}/icons/javascript.svg`,
+            },
+            {
                 name: "Typescript",
-                proficiency: 7,
+                level: 7,
+                proficiency: "comfortable",
                 icon: `${BASE_URL}/icons/typescript.svg`,
             },
             {
-                name: "Javascript",
-                proficiency: 8,
-                icon: `${BASE_URL}/icons/javascript.svg`,
-            },
-            { name: "PHP", proficiency: 8, icon: `${BASE_URL}/icons/php.svg` },
-            {
-                name: "Csharp",
-                proficiency: 5,
-                icon: `${BASE_URL}/icons/csharp.svg`,
-            },
-            {
-                name: "Python",
-                proficiency: 5,
-                icon: `${BASE_URL}/icons/python.svg`,
-            },
-            {
-                name: "Bash",
-                proficiency: 4,
-                icon: `${BASE_URL}/icons/bash.svg`,
-            },
-        ],
-    },
-    {
-        name: "Frontend Development",
-        items: [
-            { name: "CSS", proficiency: 7, icon: `${BASE_URL}/icons/css.svg` },
-            {
-                name: "JQuery",
-                proficiency: 7,
-                icon: `${BASE_URL}/icons/jquery.svg`,
-            },
-            {
                 name: "React JS",
-                proficiency: 8,
+                level: 8,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/reactjs.svg`,
             },
             {
+                name: "JQuery",
+                level: 7,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/jquery.svg`,
+            },
+            {
                 name: "Tailwind CSS",
-                proficiency: 8,
+                level: 8,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/tailwindcss.svg`,
             },
             {
                 name: "Bootstrap",
-                proficiency: 8,
+                level: 8,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/bootstrap.svg`,
             },
         ],
     },
     {
-        name: "Backend Development",
+        name: "Backend",
         items: [
             {
                 name: "Node JS",
-                proficiency: 7,
+                level: 7,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/nodejs.svg`,
             },
             {
                 name: "Express JS",
-                proficiency: 7,
+                level: 7,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/expressjs.svg`,
             },
             {
+                name: "Next JS",
+                level: 6,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/nextjs.svg`,
+            },
+            {
+                name: "PHP",
+                level: 8,
+                proficiency: "confident",
+                icon: `${BASE_URL}/icons/php.svg`,
+            },
+            {
+                name: "Laravel",
+                level: 6,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/laravel.svg`,
+            },
+            {
+                name: "CodeIgniter",
+                level: 6,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/codeigniter.svg`,
+            },
+            {
+                name: "Csharp",
+                level: 5,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/csharp.svg`,
+            },
+            {
+                name: "Python",
+                level: 5,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/python.svg`,
+            },
+            {
+                name: "ASP.NET",
+                level: 5,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/dotnet.svg`,
+            },
+            {
+                name: "Socket.IO",
+                level: 5,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/socketio.svg`,
+            },
+        ],
+    },
+    {
+        name: "Database",
+        items: [
+            {
                 name: "SQL Server",
-                proficiency: 8,
+                level: 8,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/sqlserver.svg`,
             },
             {
                 name: "MySQL",
-                proficiency: 6,
+                level: 6,
+                proficiency: "comfortable",
                 icon: `${BASE_URL}/icons/mysql.svg`,
             },
             {
                 name: "Maria DB",
-                proficiency: 7,
+                level: 6,
+                proficiency: "comfortable",
                 icon: `${BASE_URL}/icons/mariadb.svg`,
             },
         ],
     },
     {
-        name: "Fullstack Development",
+        name: "DevOps",
         items: [
             {
-                name: "Next JS",
-                proficiency: 6,
-                icon: `${BASE_URL}/icons/nextjs.svg`,
+                name: "Docker",
+                level: 4,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/docker.svg`,
             },
             {
-                name: "Laravel",
-                proficiency: 7,
-                icon: `${BASE_URL}/icons/laravel.svg`,
+                name: "AWS",
+                level: 4,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/aws.svg`,
             },
             {
-                name: "CodeIgniter",
-                proficiency: 7,
-                icon: `${BASE_URL}/icons/codeigniter.svg`,
+                name: "Bash",
+                level: 4,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/bash.svg`,
             },
             {
-                name: "ASP.NET",
-                proficiency: 5,
-                icon: `${BASE_URL}/icons/dotnet.svg`,
+                name: "Kubernetes",
+                level: 4,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/kubernetes.svg`,
+            },
+            {
+                name: "Jenkins",
+                level: 3,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/jenkins.svg`,
+            },
+            {
+                name: "Terraform",
+                level: 3,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/terraform.svg`,
             },
         ],
     },
     {
-        name: "Tools and Technologies",
+        name: "Other Tools",
         items: [
             {
-                name: "Figma",
-                proficiency: 5,
-                icon: `${BASE_URL}/icons/figma.svg`,
-            },
-            {
-                name: "Crystal Report",
-                proficiency: 6,
-                icon: `${BASE_URL}/icons/sap.svg`,
+                name: "GIT",
+                level: 8,
+                proficiency: "confident",
+                icon: `${BASE_URL}/icons/git.svg`,
             },
             {
                 name: "VS Code",
-                proficiency: 8,
+                level: 8,
+                proficiency: "confident",
                 icon: `${BASE_URL}/icons/vscode.svg`,
             },
             {
                 name: "Postman",
-                proficiency: 7,
+                level: 7,
+                proficiency: "comfortable",
                 icon: `${BASE_URL}/icons/postman.svg`,
             },
             {
-                name: "Jest",
-                proficiency: 5,
-                icon: `${BASE_URL}/icons/jest.svg`,
-            },
-            {
                 name: "Redux Toolkit",
-                proficiency: 6,
+                level: 6,
+                proficiency: "comfortable",
                 icon: `${BASE_URL}/icons/redux.svg`,
             },
             {
-                name: "Socket.IO",
-                proficiency: 5,
-                icon: `${BASE_URL}/icons/socketio.svg`,
+                name: "Jest",
+                level: 5,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/jest.svg`,
             },
-            { name: "GIT", proficiency: 8, icon: `${BASE_URL}/icons/git.svg` },
             {
-                name: "Docker",
-                proficiency: 4,
-                icon: `${BASE_URL}/icons/docker.svg`,
+                name: "Figma",
+                level: 4,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/figma.svg`,
             },
-            { name: "AWS", proficiency: 4, icon: `${BASE_URL}/icons/aws.svg` },
+            {
+                name: "Crystal Report",
+                level: 6,
+                proficiency: "comfortable",
+                icon: `${BASE_URL}/icons/sap.svg`,
+            },
         ],
     },
 ];
