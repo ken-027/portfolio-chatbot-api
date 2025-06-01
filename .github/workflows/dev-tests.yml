@@ -23,6 +23,9 @@ jobs:
 
       - name: 🧪 Run dev
         run: npm run dev
+
+      - name: 🧪 Run dev tests
+        run: npm run test:e2e
         env:
           NODE_ENV: development
           PORT: 5000
@@ -41,6 +44,3 @@ jobs:
           PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
           PUSHOVER_TOKEN: ${{ secrets.PUSHOVER_TOKEN }}
           SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
-
-      - name: 🧪 Run dev tests
-        run: npm run test:e2e
