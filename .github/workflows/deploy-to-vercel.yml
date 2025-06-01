@@ -22,7 +22,8 @@ jobs:
       - name: Build app
         run: npm run build
 
+      - name: 🔗 Link project to Vercel
+        run: vercel link --yes --token ${{ secrets.VERCEL_TOKEN }}
+
       - name: 🚀 Deploy to Vercel
-        run: |
-          vercel link --yes --token ${{ secrets.VERCEL_TOKEN }}
-          vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --yes --force
+        run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --yes
