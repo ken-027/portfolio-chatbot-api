@@ -121,10 +121,8 @@ const PROJECTS: Record<ProjectName, Project> = {
         liveDemo:
             "https://huggingface.co/spaces/kenneth-andales/portfolio_chatbot",
         description:
-            "Build gradio app using python for portfolio chatbot with tools implemented and ratelimiter for created third-party api built for express js.",
-        technologies: [
-            getSkillByName("python", backend),
-        ],
+            "Built an interactive chatbot using Gradio in Python for showcasing my portfolio. Integrated custom tools and a rate-limited third-party API built with Express.js to handle user requests efficiently and securely.",
+        technologies: [getSkillByName("python", backend)],
         githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
         type: "personal",
         aiPowered: true,
