@@ -83,7 +83,8 @@ export type ProjectName =
     | "anime_dialog_translator"
     | "py_to_any"
     | "portfolio_api"
-    | "portfolio_terminal";
+    | "portfolio_terminal"
+    | "gradio_portfolio_chatbot";
 
 export interface Service {
     title: string;
