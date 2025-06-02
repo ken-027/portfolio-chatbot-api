@@ -114,6 +114,21 @@ const PROJECTS: Record<ProjectName, Project> = {
         type: "personal",
         aiPowered: true,
     },
+    gradio_portfolio_chatbot: {
+        category: "backend",
+        title: "Gradio Portfolio Chatbot",
+        thumbnailLink: `${BASE_URL}/images/projects/gradio-portfolio-chatbot.png`,
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/portfolio_chatbot",
+        description:
+            "Build gradio app using python for portfolio chatbot with tools implemented and ratelimiter for created third-party api built for express js.",
+        technologies: [
+            getSkillByName("python", backend),
+        ],
+        githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
+        type: "personal",
+        aiPowered: true,
+    },
     dashboard: {
         category: "fullstack",
         title: "E-commerce Dashboard",
