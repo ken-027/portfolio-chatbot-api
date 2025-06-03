@@ -402,6 +402,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             "Translate Japanese anime audio into English and Filipino (Tagalog) using Gradio, OpenAI and HuggingFace open-source models running on google colab.",
         technologies: [getSkillByName("python", backend)],
         githubRepo: "https://github.com/ken-027/anime-dialog-translator",
+        liveDemo: "https://huggingface.co/spaces/kenneth-andales/py-code-converter",
         type: "personal",
         aiPowered: true,
     },
