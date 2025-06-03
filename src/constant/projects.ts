@@ -50,7 +50,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         type: "company",
     },
     fixed_asset: {
-        category: "backend",
+        category: "fullstack",
         title: "EkoopBanker Plus Accounting V2",
         thumbnailLink: `${BASE_URL}/images/projects/accounting-thumbnail.png`,
         description:
@@ -115,7 +115,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         aiPowered: true,
     },
     gradio_portfolio_chatbot: {
-        category: "backend",
+        category: "fullstack",
         title: "Gradio Portfolio Chatbot",
         thumbnailLink: `${BASE_URL}/images/projects/gradio-portfolio-chatbot.png`,
         liveDemo:
@@ -283,7 +283,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         type: "personal",
     },
     e_commerce: {
-        category: "frontend",
+        category: "fullstack",
         title: "Buyback E-commerce Website",
         description:
             "An e-commerce site that allows customers to sell their old devices, with the option to check if their device is listed on the platform before selling.",
