@@ -135,6 +135,22 @@ const PROJECTS: Record<ProjectName, Project> = {
         screenshot: `${BASE_URL}/pdf/LARAVEL_ECOMMERCE_DASHBOARD.pdf`,
         type: "freelance",
     },
+    ai_deep_research: {
+        category: "fullstack",
+        title: "AI Deep Research",
+        thumbnailLink: `${BASE_URL}/images/projects/ai-deep-research.png`,
+        description:
+            "AI Deep Research generates in-depth AI-powered reports and emails them to users using EmailJS, with a third-party rate limiter ensuring fair usage.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("openai", ai_integration),
+        ],
+        githubRepo: "https://github.com/ken-027/ai-deep-research",
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/ai-deep-research",
+        type: "personal",
+        aiPowered: true,
+    },
     gradio_portfolio_chatbot: {
         category: "fullstack",
         title: "Gradio Portfolio Chatbot",
