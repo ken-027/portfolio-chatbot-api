@@ -176,12 +176,12 @@ const SKILLS: Skill[] = [
                 proficiency: "exploring",
                 icon: `${BASE_URL}/icons/kubernetes.svg`,
             },
-            {
-                name: "Jenkins",
-                level: 3,
-                proficiency: "exploring",
-                icon: `${BASE_URL}/icons/jenkins.svg`,
-            },
+            // {
+            //     name: "Jenkins",
+            //     level: 3,
+            //     proficiency: "exploring",
+            //     icon: `${BASE_URL}/icons/jenkins.svg`,
+            // },
             {
                 name: "Terraform",
                 level: 3,
@@ -234,6 +234,23 @@ const SKILLS: Skill[] = [
                 level: 6,
                 proficiency: "comfortable",
                 icon: `${BASE_URL}/icons/sap.svg`,
+            },
+        ],
+    },
+    {
+        name: "AI Integration",
+        items: [
+            {
+                name: "OpenAI",
+                level: 5,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/openai.svg`,
+            },
+            {
+                name: "Anthropic",
+                level: 3,
+                proficiency: "exploring",
+                icon: `${BASE_URL}/icons/anthropic.svg`,
             },
         ],
     },
