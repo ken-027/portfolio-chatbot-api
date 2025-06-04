@@ -5,7 +5,7 @@ import { ItemSkill, Project, ProjectName } from "@/types";
 const frontend = SKILLS[0].items;
 const backend = SKILLS[1].items;
 const database = SKILLS[2].items;
-// const devops = SKILLS[3].items;
+const ai_integration = SKILLS[5].items;
 const tools = SKILLS[4].items;
 
 const getSkillByName = (name: string, skills: ItemSkill[]) =>
@@ -109,21 +109,10 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("typescript", frontend),
             getSkillByName("node js", backend),
             getSkillByName("express js", backend),
+            getSkillByName("express js", backend),
+            getSkillByName("openai", ai_integration),
         ],
         githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
-        type: "personal",
-        aiPowered: true,
-    },
-    gradio_portfolio_chatbot: {
-        category: "fullstack",
-        title: "Gradio Portfolio Chatbot",
-        thumbnailLink: `${BASE_URL}/images/projects/gradio-portfolio-chatbot.png`,
-        liveDemo:
-            "https://huggingface.co/spaces/kenneth-andales/portfolio_chatbot",
-        description:
-            "Built an interactive chatbot using Gradio in Python for showcasing my portfolio. Integrated custom tools and a rate-limited third-party API built with Express.js to handle user requests efficiently and securely.",
-        technologies: [getSkillByName("python", backend)],
-        githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
         type: "personal",
         aiPowered: true,
     },
@@ -132,7 +121,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "E-commerce Dashboard",
         thumbnailLink: `${BASE_URL}/images/projects/ecommerce-dashboard-thumbnail.png`,
         description:
-            "An e-commerce dashboard for managing inventory items, enabling seamless tracking, updating, and organization of products.",
+            "A comprehensive dashboard designed for efficient inventory management in an e-commerce setting. Enables seamless tracking, updating, and categorization of products with real-time data interaction. Features include intuitive product organization, stock level monitoring, and streamlined workflows for managing item details, availability, and updates.",
         technologies: [
             getSkillByName("css", frontend),
             getSkillByName("html", frontend),
@@ -143,8 +132,24 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("laravel", backend),
             getSkillByName("maria db", database),
         ],
-        githubRepo: "https://github.com/ken-027/laravel-ecommerce-admin",
+        screenshot: `${BASE_URL}/pdf/LARAVEL_ECOMMERCE_DASHBOARD.pdf`,
         type: "freelance",
+    },
+    gradio_portfolio_chatbot: {
+        category: "fullstack",
+        title: "Gradio Portfolio Chatbot",
+        thumbnailLink: `${BASE_URL}/images/projects/gradio-portfolio-chatbot.png`,
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/portfolio_chatbot",
+        description:
+            "Built an interactive chatbot using Gradio in Python for showcasing my portfolio. Integrated custom tools and a rate-limited third-party API built with Express.js to handle user requests efficiently and securely.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("openai", ai_integration),
+        ],
+        githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
+        type: "personal",
+        aiPowered: true,
     },
     rustify: {
         category: "fullstack",
@@ -160,6 +165,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("tailwind css", frontend),
             getSkillByName("node js", backend),
             getSkillByName("next js", backend),
+            getSkillByName("anthropic", ai_integration),
         ],
         githubRepo: "https://github.com/ken-027/rustify",
         type: "personal",
@@ -214,7 +220,6 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
             getSkillByName("tailwind css", frontend),
         ],
-        githubRepo: "https://github.com/ken-027/wiwosite",
         liveDemo: "https://kenneth-andales.github.io/wilson-works/",
         type: "freelance",
     },
@@ -230,7 +235,6 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("javascript", frontend),
             getSkillByName("react js", frontend),
         ],
-        githubRepo: "https://github.com/ken-027/libre-site",
         liveDemo: "https://kenneth-andales.github.io/libre/",
         type: "freelance",
     },
@@ -402,7 +406,6 @@ const PROJECTS: Record<ProjectName, Project> = {
             "Translate Japanese anime audio into English and Filipino (Tagalog) using Gradio, OpenAI and HuggingFace open-source models running on google colab.",
         technologies: [getSkillByName("python", backend)],
         githubRepo: "https://github.com/ken-027/anime-dialog-translator",
-        liveDemo: "https://huggingface.co/spaces/kenneth-andales/py-code-converter",
         type: "personal",
         aiPowered: true,
     },
@@ -412,8 +415,13 @@ const PROJECTS: Record<ProjectName, Project> = {
         thumbnailLink: `${BASE_URL}/images/projects/code_conversion.png`,
         description:
             "A simple code conversion tool that converts Python code to any programming frontend like cpp, javascript and php using openai and anthropic",
-        technologies: [getSkillByName("python", backend)],
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("openai", ai_integration),
+        ],
         githubRepo: "https://github.com/ken-027/py-to-any",
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/py-code-converter",
         type: "personal",
         aiPowered: true,
     },
