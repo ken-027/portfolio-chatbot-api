@@ -84,7 +84,8 @@ export type ProjectName =
     | "py_to_any"
     | "portfolio_api"
     | "portfolio_terminal"
-    | "gradio_portfolio_chatbot";
+    | "gradio_portfolio_chatbot"
+    | "ai_deep_research";
 
 export interface Service {
     title: string;
