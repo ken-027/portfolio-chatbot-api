@@ -54,6 +54,7 @@ export interface Project {
     category: Category;
     type: ProjectType;
     aiPowered?: boolean;
+    dockerLink?: string;
 }
 
 export const CATEGORIES: Category[] = ["frontend", "backend", "fullstack"];
