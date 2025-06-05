@@ -171,7 +171,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "fullstack",
         title: "Rustify",
         thumbnailLink: `${BASE_URL}/images/projects/rustify.png`,
-        liveDemo: "https://rustify-sigma.vercel.app",
+        liveDemo: "https://rustify.ksoftdev.site",
         description:
             "A simple conversion tool for converting js/ts code to rust code using Anthropic AI.",
         technologies: [
