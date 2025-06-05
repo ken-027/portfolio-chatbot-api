@@ -78,8 +78,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("tailwind css", frontend),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
-        dockerLink:
-            "https://hub.docker.com/repository/docker/ken027/portfolio-site",
+        dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
         liveDemo: "https://kenneth-andales.github.io",
         type: "personal",
     },
@@ -97,8 +96,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("tailwind css", frontend),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
-        dockerLink:
-            "https://hub.docker.com/repository/docker/ken027/portfolio-site",
+        dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
         liveDemo: "#terminal-styled",
         type: "personal",
     },
@@ -117,8 +115,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("openai", ai_integration),
         ],
         githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
-        dockerLink:
-            "https://hub.docker.com/repository/docker/ken027/portfolio-api",
+        dockerLink: "https://hub.docker.com/r/ken027/portfolio-api",
         type: "personal",
         aiPowered: true,
     },
