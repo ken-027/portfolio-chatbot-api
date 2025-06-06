@@ -7,6 +7,7 @@ const backend = SKILLS[1].items;
 const database = SKILLS[2].items;
 const ai_integration = SKILLS[5].items;
 const tools = SKILLS[4].items;
+const dev_ops = SKILLS[3].items;
 
 const getSkillByName = (name: string, skills: ItemSkill[]) =>
     (skills.find(
@@ -76,6 +77,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("html", frontend),
             getSkillByName("react js", frontend),
             getSkillByName("tailwind css", frontend),
+            getSkillByName("docker", dev_ops),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
@@ -94,6 +96,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("html", frontend),
             getSkillByName("react js", frontend),
             getSkillByName("tailwind css", frontend),
+            getSkillByName("docker", dev_ops),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
@@ -113,6 +116,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("express js", backend),
             getSkillByName("express js", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("docker", dev_ops),
         ],
         githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-api",
