@@ -81,7 +81,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
-        liveDemo: "https://kenneth-andales.github.io",
+        liveDemo: "https://portfolio.ksoftdev.site",
         type: "personal",
     },
     portfolio_terminal: {
@@ -178,7 +178,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "fullstack",
         title: "Rustify",
         thumbnailLink: `${BASE_URL}/images/projects/rustify.png`,
-        liveDemo: "https://rustify-sigma.vercel.app",
+        liveDemo: "https://rustify.ksoftdev.site",
         description:
             "A simple conversion tool for converting js/ts code to rust code using Anthropic AI.",
         technologies: [
@@ -243,7 +243,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
             getSkillByName("tailwind css", frontend),
         ],
-        liveDemo: "https://kenneth-andales.github.io/wilson-works/",
+        liveDemo: "https://wiwo.ksoftdev.site",
         type: "freelance",
     },
     libre: {
@@ -258,7 +258,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("javascript", frontend),
             getSkillByName("react js", frontend),
         ],
-        liveDemo: "https://kenneth-andales.github.io/libre/",
+        liveDemo: "https://libre.ksoftdev.site",
         type: "freelance",
     },
     educat: {
@@ -274,7 +274,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/educat-landing",
-        liveDemo: "https://kenneth-andales.github.io/educat/",
+        liveDemo: "https://educat.ksoftdev.site",
         type: "personal",
     },
     agency_match: {
@@ -290,7 +290,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/agency-match",
-        liveDemo: "https://kenneth-andales.github.io/agency-match/",
+        liveDemo: "https://agency-match.ksoftdev.site",
         type: "personal",
     },
     trabook: {
@@ -306,7 +306,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/trabook",
-        liveDemo: "https://kenneth-andales.github.io/trabook/",
+        liveDemo: "https://trabook.ksoftdev.site",
         type: "personal",
     },
     e_commerce: {
