@@ -31,8 +31,8 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "Typescript",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/typescript.svg`,
             },
             {
@@ -55,8 +55,8 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "Bootstrap",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/bootstrap.svg`,
             },
         ],
@@ -67,13 +67,13 @@ const SKILLS: Skill[] = [
             {
                 name: "Node JS",
                 level: 7,
-                proficiency: "expert",
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/nodejs.svg`,
             },
             {
                 name: "Express JS",
                 level: 7,
-                proficiency: "expert",
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/expressjs.svg`,
             },
             {
@@ -131,8 +131,8 @@ const SKILLS: Skill[] = [
         items: [
             {
                 name: "SQL Server",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/sqlserver.svg`,
             },
             {
@@ -238,19 +238,49 @@ const SKILLS: Skill[] = [
         ],
     },
     {
-        name: "AI Integration",
+        name: "AI & LLM Development",
         items: [
             {
                 name: "OpenAI",
                 level: 5,
-                proficiency: "beginner",
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/openai.svg`,
             },
             {
                 name: "Anthropic",
-                level: 2,
+                level: 3,
                 proficiency: "beginner",
                 icon: `${BASE_URL}/icons/anthropic.svg`,
+            },
+            {
+                name: "CrewAI",
+                level: 3,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/crewai.svg`,
+            },
+            {
+                name: "LangChain",
+                level: 3,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/lang-chain.svg`,
+            },
+            {
+                name: "LangGraph",
+                level: 3,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/lang-graph.svg`,
+            },
+            // {
+            //     name: "AutoGen",
+            //     level: 3,
+            //     proficiency: "beginner",
+            //     icon: `${BASE_URL}/icons/auto-gen.svg`, // you can add or create an icon
+            // },
+            {
+                name: "MCP",
+                level: 3,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/mcp.svg`, // you can add or create an icon
             },
         ],
     },

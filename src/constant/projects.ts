@@ -142,6 +142,23 @@ const PROJECTS: Record<ProjectName, Project> = {
         screenshot: `${BASE_URL}/pdf/LARAVEL_ECOMMERCE_DASHBOARD.pdf`,
         type: "freelance",
     },
+    resume_match_ai: {
+        category: "backend",
+        title: "Resume Match App",
+        thumbnailLink: `${BASE_URL}/images/projects/resume-match-ai.png`,
+        description:
+            "Resume Match AI is a multi-agent app that analyzes your resume, finds relevant job listings, scores compatibility, and suggests improvements—all powered by CrewAI.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("anthropic", ai_integration),
+            getSkillByName("crewai", ai_integration),
+        ],
+        githubRepo: "https://github.com/ken-027/resume-match-ai",
+        liveDemo:
+            "https://resume-match-ai-599528b1-cf57-446a-8922-4b5-ec219a74.crewai.com/inputs",
+        type: "personal",
+        aiPowered: true,
+    },
     ai_deep_research: {
         category: "fullstack",
         title: "AI Deep Research",
@@ -426,9 +443,15 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Anime Audio Translator",
         thumbnailLink: `${BASE_URL}/images/projects/anime-audio-translator.png`,
         description:
-            "Translate Japanese anime audio into English and Filipino (Tagalog) using Gradio, OpenAI and HuggingFace open-source models running on google colab.",
-        technologies: [getSkillByName("python", backend)],
+            "This project leverages the power of Gradio to create a user-friendly interface, OpenAI's Whisper for accurate speech-to-text transcription, and Anthropic's Claude model for high-quality multilingual translation.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("openai", ai_integration),
+            getSkillByName("anthropic", ai_integration),
+        ],
         githubRepo: "https://github.com/ken-027/anime-dialog-translator",
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/anime-audio-translator",
         type: "personal",
         aiPowered: true,
     },

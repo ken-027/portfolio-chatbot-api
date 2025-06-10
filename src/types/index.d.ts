@@ -37,6 +37,7 @@ export interface Experience {
     descriptions: string[];
     companyLogo?: string;
     projects?: Project[];
+    companyLink?: string;
 }
 
 export type Category = "fullstack" | "frontend" | "backend";
@@ -86,7 +87,8 @@ export type ProjectName =
     | "portfolio_api"
     | "portfolio_terminal"
     | "gradio_portfolio_chatbot"
-    | "ai_deep_research";
+    | "ai_deep_research"
+    | "resume_match_ai";
 
 export interface Service {
     title: string;
