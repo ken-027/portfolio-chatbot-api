@@ -27,6 +27,16 @@ const CERTIFICATES: Certificate[] = [
     },
     {
         courseLink:
+            "https://www.udemy.com/share/10dgIV3@3PRRW6hZhNZus-WqMJ7klaYzQ9JrqFTfSFMdJ8Lcsuf7x7MZZLXElzSgY4pgXSsuJQ==",
+        name: "AI Agents & Autonomous Apps with LangGraph & LangChain",
+        platform: "Udemy",
+        dateCompleted: "ongoing",
+        description:
+            "Learn how to create powerful AI agents and design multi-agent autonomous workflows using &lt;strong&gt;LangGraph&lt;/strong&gt; and &lt;strong&gt;LangChain&lt;/strong&gt;. Build real-world applications that automate complex tasks and enable intelligent decision-making with cutting-edge &lt;strong&gt;AI frameworks&lt;/strong&gt;.",
+        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
+    },
+    {
+        courseLink:
             "https://www.udemy.com/share/104Tz63@7P1To3EQcAXMXxYDRpGYDQbhoUKPzgjok3XU6cJRKaSrO5RGltZ_dGX2tAKtAv5UCw==",
         name: "DevOps",
         platform: "Udemy",
@@ -38,15 +48,26 @@ const CERTIFICATES: Certificate[] = [
             "https://www.udemy.com/certificate/UC-0f82967f-c0f2-4abf-a24b-7486388a0d21/",
         certificateImage: `${BASE_URL}/images/certificates/devops-certificate.jpg`,
     },
-    // {
-    //     courseLink: "https://www.natcco.coop",
-    //     name: "Mid-Software Developer",
-    //     platform: "NATCCO",
-    //     dateCompleted: new Date("2025-03-25"),
-    //     description:
-    //         "NATCCO (National Confederation of Cooperatives) – the largest federation of cooperatives in the Philippines, providing training, financial services, and digital tools to empower community-based organizations",
-    //     platformLogo: `${BASE_URL}/images/companies/natcco-logo.svg`,
-    // },
+    {
+        courseLink:
+            "https://www.udemy.com/share/104coM3@xjybR_4oh_OZZY-lNCA-qu-ewROtCKizj60DXcb9NcOc8-lswhFP4w2FGQeh_5NEjw==",
+        name: "Next JS 15",
+        platform: "Udemy",
+        dateCompleted: "ongoing",
+        description:
+            "Completed a comprehensive Next.js 15 course covering full-stack React development using the App Router. Gained hands-on experience with React Server Components, data fetching, file-based routing, server actions, and authentication. Explored both App Router and Pages Router approaches, and built real-world projects to reinforce learning.",
+        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
+    },
+    {
+        courseLink:
+            "https://www.udemy.com/share/1013ja3@oS043JFY0UNL77HWc8_rGbaD2kvGKWfUbI-lhoJMmag0RyTNm8TvvgtboAGX66L3kQ==",
+        name: "Data Structures + Algorithms",
+        platform: "Udemy",
+        dateCompleted: "ongoing",
+        description:
+            "This comprehensive program teaches essential algorithms, data structures, and problem-solving techniques used in professional software development, covering core concepts including sorting algorithms, trees, graphs, and hash tables with emphasis on practical implementation and performance optimization.",
+        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
+    },
 ];
 
 export default CERTIFICATES;
