@@ -88,6 +88,7 @@ export type ProjectName =
     | "portfolio_terminal"
     | "gradio_portfolio_chatbot"
     | "ai_deep_research"
+    | "resume_match_gradio"
     | "resume_match_ai";
 
 export interface Service {
