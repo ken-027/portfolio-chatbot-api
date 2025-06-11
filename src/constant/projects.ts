@@ -142,6 +142,22 @@ const PROJECTS: Record<ProjectName, Project> = {
         screenshot: `${BASE_URL}/pdf/LARAVEL_ECOMMERCE_DASHBOARD.pdf`,
         type: "freelance",
     },
+    resume_match_gradio: {
+        category: "fullstack",
+        title: "Resume Match Gradio",
+        thumbnailLink: `${BASE_URL}/images/projects/resume-match-gradio.png`,
+        description:
+            "Resume Match AI is a multi-agent app that analyzes your resume, finds relevant job listings, scores compatibility, and suggests improvements—all powered by CrewAI and Gradio app.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("gradio", tools),
+        ],
+        githubRepo: "https://github.com/ken-027/resume-match-gradio",
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/resume-match-ai",
+        type: "personal",
+        aiPowered: true,
+    },
     resume_match_ai: {
         category: "backend",
         title: "Resume Match App",
@@ -168,6 +184,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("gradio", tools),
         ],
         githubRepo: "https://github.com/ken-027/ai-deep-research",
         liveDemo:
@@ -186,6 +203,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("gradio", tools),
         ],
         githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
         type: "personal",
@@ -448,6 +466,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
             getSkillByName("anthropic", ai_integration),
+            getSkillByName("gradio", tools),
         ],
         githubRepo: "https://github.com/ken-027/anime-dialog-translator",
         liveDemo:
@@ -464,6 +483,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("gradio", tools),
         ],
         githubRepo: "https://github.com/ken-027/py-to-any",
         liveDemo:

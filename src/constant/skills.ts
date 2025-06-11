@@ -235,6 +235,12 @@ const SKILLS: Skill[] = [
                 proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/sap.svg`,
             },
+            {
+                name: "Gradio",
+                level: 4,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/gradio.svg`,
+            },
         ],
     },
     {
