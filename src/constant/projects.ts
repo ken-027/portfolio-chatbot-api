@@ -117,6 +117,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("express js", backend),
             getSkillByName("openai", ai_integration),
             getSkillByName("docker", dev_ops),
+            getSkillByName("vector db", database),
         ],
         githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-api",

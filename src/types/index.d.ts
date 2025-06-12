@@ -15,12 +15,14 @@ export interface Email {
 export interface Certificate {
     name: string;
     platform: string;
+    provider: string;
     platformLogo?: string;
-    dateCompleted: Date | "ongoing";
-    description: string;
+    dateCompleted?: Date;
     certificateLink?: string;
     certificateImage?: string;
     courseLink?: string;
+    skills: string[];
+    status: "ongoing" | "plan" | "completed";
 }
 
 export interface Contact {
