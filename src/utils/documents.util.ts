@@ -78,10 +78,18 @@ export const experiences = EXPERIENCES.map(
 );
 
 export const certificates = CERTIFICATES.map(
-    ({ dateCompleted, description, name, certificateLink, courseLink }) =>
-        `Name: ${name}, description: ${description}, Date Completed: ${dateCompleted}, Certificate Link: ${
+    ({
+        dateCompleted,
+        skills,
+        name,
+        certificateLink,
+        courseLink,
+        provider,
+        status,
+    }) =>
+        `Name: ${name}, skills: ${skills.join(", ")}, Date Completed: ${dateCompleted || ""}, Certificate Link: ${
             certificateLink || ""
-        }, Course Link: ${courseLink || ""}`,
+        }, Course Link: ${courseLink || ""}, Providers: ${provider}, Status: ${status}`,
 );
 
 export const contacts = CONTACTS.map(

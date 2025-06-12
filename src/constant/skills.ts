@@ -147,6 +147,12 @@ const SKILLS: Skill[] = [
                 proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/mariadb.svg`,
             },
+            {
+                name: "Vector DB",
+                level: 4,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/vector-db.svg`,
+            },
         ],
     },
     {
