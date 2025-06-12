@@ -19,6 +19,7 @@ const CERTIFICATES: Certificate[] = [
             "RAG",
             "Gradio",
             "Fine-tuning",
+            "Hugging Face",
         ],
         provider: "Ed Donner - Ligency Team",
     },
@@ -26,7 +27,8 @@ const CERTIFICATES: Certificate[] = [
         courseLink:
             "https://www.udemy.com/share/10dasB3@X0vZ9F0id4qBL8y2SkOwozeRxp70GD7JWR9cWmjIqnpnf4Efp_JSbUjtitd5gB9yfg==",
         name: "Agentic AI Engineering",
-        status: "ongoing",
+        dateCompleted: new Date("2025-06-12"),
+        status: "completed",
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
         skills: [
@@ -40,6 +42,9 @@ const CERTIFICATES: Certificate[] = [
             "Python",
         ],
         provider: "Ed Donner - Ligency Team",
+        certificateImage: `${BASE_URL}/images/certificates/ai-engineering-certificate.jpg`,
+        certificateLink:
+            "https://www.udemy.com/certificate/UC-040b9e0b-c8ff-4b47-a1e3-893e80c7ca04",
     },
     {
         courseLink:
@@ -47,7 +52,7 @@ const CERTIFICATES: Certificate[] = [
         name: "AI Agents & Autonomous Apps with LangGraph & LangChain",
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "plan",
+        status: "ongoing",
         skills: [
             "LangGraph",
             "LangChain",
@@ -88,7 +93,7 @@ const CERTIFICATES: Certificate[] = [
         name: "Next.js 15 & React - The Complete Guide",
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "plan",
+        status: "ongoing",
         skills: ["Next.js 15", "React"],
         provider: "Maximilian Schwarzmüller",
     },
@@ -98,7 +103,7 @@ const CERTIFICATES: Certificate[] = [
         name: "Microservices with Node JS and React",
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "plan",
+        status: "ongoing",
         skills: [
             "Node.js",
             "Express JS",
