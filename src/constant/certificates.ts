@@ -15,6 +15,7 @@ const CERTIFICATES: Certificate[] = [
         status: "completed",
         skills: [
             "Prompt Engineering",
+            "Vector DB",
             "Python",
             "RAG",
             "Gradio",
@@ -94,7 +95,15 @@ const CERTIFICATES: Certificate[] = [
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
         status: "ongoing",
-        skills: ["Next.js 15", "React"],
+        skills: [
+            "Next.js 15",
+            "React",
+            "SSR",
+            "SSG",
+            "Pre-rendering",
+            "App Router",
+            "Authentication",
+        ],
         provider: "Maximilian Schwarzmüller",
     },
     {
@@ -107,7 +116,7 @@ const CERTIFICATES: Certificate[] = [
         skills: [
             "Node.js",
             "Express JS",
-            "React",
+            "Jest",
             "Typescript",
             "Microservices",
             "MongoDB",
