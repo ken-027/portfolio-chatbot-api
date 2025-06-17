@@ -1,4 +1,5 @@
 import CERTIFICATES from "@/constant/certificates";
+import DEVELOPER_PLATFORM from "@/constant/developer-platform";
 import EXPERIENCES from "@/constant/experiences";
 import PROJECTS from "@/constant/projects";
 import SERVICES from "@/constant/services";
@@ -335,4 +336,43 @@ export async function skills(
         items: items.sort(({ level }, { level: levelB }) => levelB - level),
     }));
     response.json({ skills });
+}
+
+/**
+ * @swagger
+ * /api/v1/portfolio/developer-platform:
+ *   get:
+ *     summary: Get all developer's platform
+ *     tags: [Portfolio]
+ *     responses:
+ *       200:
+ *         description: A list of platforms
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 platforms:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       name:
+ *                         type: string
+ *                         example: Github
+ *                       link:
+ *                         type: string
+ *                         format: uri
+ *                         example: https://github.com/ken-027
+ *                       icon:
+ *                         type: string
+ *                         format: uri
+ *                         example: https://cdn.example.com/images/developer-platform/github.svg
+ */
+export async function platforms(
+    _request: Request<never, unknown>,
+    response: Response,
+) {
+    const platforms = DEVELOPER_PLATFORM;
+    response.json({ platforms });
 }

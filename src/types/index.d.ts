@@ -125,3 +125,9 @@ export interface SessionMessages extends SessionData {
 export type SessionRequest = Request & {
     session: SessionMessages;
 };
+
+export interface DeveloperPlatform {
+    icon: string;
+    link: string;
+    name: string;
+}
