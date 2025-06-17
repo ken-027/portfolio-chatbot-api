@@ -132,7 +132,7 @@ const CERTIFICATES: Certificate[] = [
         name: "Data Structures + Algorithms",
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "plan",
+        status: "ongoing",
         skills: [
             "Big O Notation",
             "Data Structures",

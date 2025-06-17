@@ -17,7 +17,7 @@ const EXPERIENCES: Experience[] = [
         ],
         companyLogo: `${BASE_URL}/images/companies/natcco-logo.svg`,
         projects: [PROJECTS.casa, PROJECTS.casa_api, PROJECTS.fixed_asset],
-        companyLink: "https://natcco.coop",
+        // companyLink: "https://natcco.coop",
     },
     {
         title: "Freelance Web Developer",
@@ -53,7 +53,7 @@ const EXPERIENCES: Experience[] = [
         ],
         companyLogo: `${BASE_URL}/images/companies/cloud-panda-ph-logo.svg`,
         projects: [PROJECTS.mta, PROJECTS.llda],
-        companyLink: "https://www.cloudpanda.ph",
+        // companyLink: "https://www.cloudpanda.ph",
     },
     {
         title: "Jr. Web Developer",
@@ -68,7 +68,7 @@ const EXPERIENCES: Experience[] = [
         ],
         companyLogo: `${BASE_URL}/images/companies/ipp-logo.svg`,
         projects: [PROJECTS.csrm, PROJECTS.csrm_api, PROJECTS.ema],
-        companyLink: "https://intl-payments.com",
+        // companyLink: "https://intl-payments.com",
     },
 ];
 

@@ -3,6 +3,7 @@ import {
     certificates,
     experiences,
     getTotalYearsExperience,
+    platforms,
     projects,
     services,
     skills,
@@ -18,5 +19,6 @@ portfolioRoutes.route("/services").get(services);
 portfolioRoutes.route("/certificates").get(certificates);
 portfolioRoutes.route("/projects").get(projects);
 portfolioRoutes.route("/skills").get(skills);
+portfolioRoutes.route("/developer-platform").get(platforms);
 
 export default portfolioRoutes;
