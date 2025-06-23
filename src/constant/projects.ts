@@ -20,7 +20,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "EkoopBanker Plus CASA V3 (UI)",
         thumbnailLink: `${BASE_URL}/images/projects/casa-thumbnail.png`,
         description:
-            "A core banking system that handles banking transactions and generates financial reports.",
+            "Modern UI for a core banking system, enabling seamless transactions and financial reporting.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("typescript", frontend),
@@ -38,7 +38,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "EkoopBanker Plus CASA V3 (API)",
         thumbnailLink: `${BASE_URL}/images/projects/casa-thumbnail.png`,
         description:
-            "A core banking system that handles banking transactions and generates financial reports.",
+            "Robust backend API powering banking operations and real-time financial data.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("node js", backend),
@@ -55,7 +55,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "EkoopBanker Plus Accounting V2",
         thumbnailLink: `${BASE_URL}/images/projects/accounting-thumbnail.png`,
         description:
-            "An accounting system that manages fixed asset transactions and generates detailed reports for asset management.",
+            "Accounting system for managing fixed assets and generating detailed reports.",
         technologies: [
             getSkillByName("csharp", backend),
             getSkillByName("asp.net", backend),
@@ -70,7 +70,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Portfolio Site",
         thumbnailLink: `${BASE_URL}/images/projects/portfolio-site-thumbnail.png`,
         description:
-            "A simple portfolio website that showcases my experiences, projects, and services",
+            "Personal website showcasing my skills, projects, and services in a clean layout.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("css", frontend),
@@ -89,7 +89,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Terminal-Styled Portfolio",
         thumbnailLink: `${BASE_URL}/images/projects/terminal-based-portfolio.png`,
         description:
-            "A terminal-style portfolio website designed to showcase my skills, featured projects, and professional services with a nostalgic command-line interface.",
+            "Portfolio site with a nostalgic terminal interface to highlight my work and skills.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("css", frontend),
@@ -109,7 +109,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         thumbnailLink: `${BASE_URL}/images/projects/portfolio-chatbot-api.png`,
         liveDemo: "https://portfolio-api.ksoftdev.site/api-docs",
         description:
-            "Built a simple portfolio with chatbot API that combines OpenAI's frontend model with Retrieval-Augmented Generation (RAG), using MongoDB's Vector Search for embedding-based document retrieval to provide more relevant and context-aware responses.",
+            "API with AI-powered chatbot using RAG and MongoDB Vector Search for smart responses.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("node js", backend),
@@ -124,12 +124,32 @@ const PROJECTS: Record<ProjectName, Project> = {
         type: "personal",
         aiPowered: true,
     },
+    ticketing_microservices: {
+        category: "backend",
+        title: "Nodejs Ticketing Microservices",
+        thumbnailLink: `${BASE_URL}/images/projects/nodejs-ticketing-microservices.png`,
+        description:
+            "Microservices-based ticketing system with event-driven architecture and Kubernetes.",
+        technologies: [
+            getSkillByName("typescript", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("express js", backend),
+            getSkillByName("mongodb", database),
+            getSkillByName("jest", tools),
+            getSkillByName("npm", tools),
+            getSkillByName("docker", dev_ops),
+            getSkillByName("kubernetes", dev_ops),
+        ],
+        githubRepo: "https://github.com/ken-027/ticketing-microservices",
+        dockerLink: "https://hub.docker.com/u/ken027?page=1&search=ticketing-",
+        type: "personal",
+    },
     dashboard: {
         category: "fullstack",
         title: "E-commerce Dashboard",
         thumbnailLink: `${BASE_URL}/images/projects/ecommerce-dashboard-thumbnail.png`,
         description:
-            "A comprehensive dashboard designed for efficient inventory management in an e-commerce setting. Enables seamless tracking, updating, and categorization of products with real-time data interaction. Features include intuitive product organization, stock level monitoring, and streamlined workflows for managing item details, availability, and updates.",
+            "Dashboard for real-time inventory management and product tracking in e-commerce.",
         technologies: [
             getSkillByName("css", frontend),
             getSkillByName("html", frontend),
@@ -148,7 +168,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Resume Match Gradio",
         thumbnailLink: `${BASE_URL}/images/projects/resume-match-gradio.png`,
         description:
-            "Resume Match AI is a multi-agent app that analyzes your resume, finds relevant job listings, scores compatibility, and suggests improvements—all powered by CrewAI and Gradio app.",
+            "AI app that analyzes resumes, finds jobs, and suggests improvements using CrewAI and Gradio.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("gradio", tools),
@@ -164,7 +184,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Resume Match App",
         thumbnailLink: `${BASE_URL}/images/projects/resume-match-ai.png`,
         description:
-            "Resume Match AI is a multi-agent app that analyzes your resume, finds relevant job listings, scores compatibility, and suggests improvements—all powered by CrewAI.",
+            "Multi-agent AI app for resume analysis, job matching, and personalized feedback.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("anthropic", ai_integration),
@@ -181,7 +201,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "AI Deep Research",
         thumbnailLink: `${BASE_URL}/images/projects/ai-deep-research.png`,
         description:
-            "AI Deep Research generates in-depth AI-powered reports and emails them to users using EmailJS, with a third-party rate limiter ensuring fair usage.",
+            "Generates in-depth AI-powered reports and delivers them via email with usage control.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
@@ -200,7 +220,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         liveDemo:
             "https://huggingface.co/spaces/kenneth-andales/portfolio_chatbot",
         description:
-            "Built an interactive chatbot using Gradio in Python for showcasing my portfolio. Integrated custom tools and a rate-limited third-party API built with Express.js to handle user requests efficiently and securely.",
+            "AI-powered portfolio chatbot built with Gradio, featuring interactive conversations and secure user requests via a custom third-party API.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
@@ -216,7 +236,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         thumbnailLink: `${BASE_URL}/images/projects/rustify.png`,
         liveDemo: "https://rustify.ksoftdev.site",
         description:
-            "A simple conversion tool for converting js/ts code to rust code using Anthropic AI.",
+            "Converts JavaScript/TypeScript code to Rust using Anthropic AI for fast prototyping.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("typescript", frontend),
@@ -235,7 +255,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Job Posting",
         thumbnailLink: `${BASE_URL}/images/projects/job-posting-thumbnail.png`,
         description:
-            "A simple job posting site that allows users to create, manage, and track job listings.",
+            "Simple platform for creating, managing, and tracking job listings online.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -253,7 +273,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Invoice CRUD",
         thumbnailLink: `${BASE_URL}/images/projects/invoice-crud-thumbnail.png`,
         description:
-            "A simple CRUD application for efficiently managing and processing invoice.",
+            "CRUD app for efficient invoice management and processing.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -271,7 +291,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Wilson Works Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/wilson-works-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Responsive landing page with smooth animations for an engaging user experience.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("css", frontend),
@@ -287,7 +307,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Libre Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/libre-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Clean, responsive landing page with subtle animations for modern web presence.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
@@ -302,7 +322,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Educat Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/educat-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Modern, responsive landing page designed for educational platforms.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
@@ -318,7 +338,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "AgencyMatch Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/agency-match-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Responsive landing page with smooth animations for agency branding.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
@@ -334,7 +354,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "TraBook Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/trabook-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Attractive, responsive landing page for travel-related services.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
@@ -349,7 +369,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "fullstack",
         title: "Buyback E-commerce Website",
         description:
-            "An e-commerce site that allows customers to sell their old devices, with the option to check if their device is listed on the platform before selling.",
+            "E-commerce platform for customers to sell old devices and check listings easily.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("bootstrap", frontend),
@@ -361,7 +381,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "fullstack",
         title: "DSWD Minor Travelling Abroad",
         description:
-            "A government website for the Department of Social Welfare and Development (DSWD) that facilitates booking and approval of travel for minors.",
+            "Government site for booking and approving minor travel with user-friendly workflows.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -378,7 +398,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "fullstack",
         title: "Laguna Lake Development Authority",
         description:
-            "A government website for the Laguna Lake Development Authority (LLDA) that handles the approval process and certification for activities in the Laguna region.",
+            "Certification and approval platform for activities in the Laguna region.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -395,7 +415,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "frontend",
         title: "Customer Service Record Management System (UI)",
         description:
-            "An internal customer service system designed to efficiently manage customer interactions, inquiries, and support requests.",
+            "UI for managing customer interactions and support requests efficiently.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -408,7 +428,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "backend",
         title: "Customer Service Record Management System (API)",
         description:
-            "An internal customer service system designed to efficiently manage customer interactions, inquiries, and support requests.",
+            "Backend API for handling customer service records and support data.",
         technologies: [
             getSkillByName("php", backend),
             getSkillByName("mysql", database),
@@ -419,7 +439,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         category: "fullstack",
         title: "EMA V2 E-commerce Website",
         description:
-            "An e-commerce platform for managing merchant products, enabling seamless product listing, updates, and inventory tracking.",
+            "E-commerce platform for merchants to manage products and inventory with ease.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -462,7 +482,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Anime Audio Translator",
         thumbnailLink: `${BASE_URL}/images/projects/anime-audio-translator.png`,
         description:
-            "This project leverages the power of Gradio to create a user-friendly interface, OpenAI's Whisper for accurate speech-to-text transcription, and Anthropic's Claude model for high-quality multilingual translation.",
+            "Transcribes and translates anime audio using Gradio, Whisper, and Anthropic Claude.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
@@ -480,7 +500,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Python Code to Any",
         thumbnailLink: `${BASE_URL}/images/projects/code_conversion.png`,
         description:
-            "A simple code conversion tool that converts Python code to any programming frontend like cpp, javascript and php using openai and anthropic",
+            "Converts Python code to other languages using OpenAI and Anthropic for fast prototyping.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),

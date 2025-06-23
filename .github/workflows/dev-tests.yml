@@ -1,10 +1,7 @@
 name: Dev Tests
 
 on:
-  push:
-    branches:
-      - dev
-
+    pull_request
 jobs:
   TESTING_ENDPOINTS:
     runs-on: ubuntu-latest

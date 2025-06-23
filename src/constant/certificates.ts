@@ -94,7 +94,7 @@ const CERTIFICATES: Certificate[] = [
         name: "Next.js 15 & React - The Complete Guide",
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "ongoing",
+        status: "plan",
         skills: [
             "Next.js 15",
             "React",
