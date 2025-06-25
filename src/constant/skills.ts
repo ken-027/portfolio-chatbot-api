@@ -7,14 +7,14 @@ const SKILLS: Skill[] = [
         items: [
             {
                 name: "HTML",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/html.svg`,
             },
             {
                 name: "CSS",
                 level: 7,
-                proficiency: "expert",
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/css.svg`,
             },
             {
@@ -25,8 +25,8 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "Javascript",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/javascript.svg`,
             },
             {
@@ -37,8 +37,8 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "React JS",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/reactjs.svg`,
             },
             {
@@ -49,8 +49,8 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "Tailwind CSS",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/tailwindcss.svg`,
             },
             {
@@ -84,8 +84,8 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "PHP",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/php.svg`,
             },
             {
@@ -102,8 +102,8 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "Csharp",
-                level: 5,
-                proficiency: "intermediate",
+                level: 4,
+                proficiency: "beginner",
                 icon: `${BASE_URL}/icons/csharp.svg`,
             },
             {
@@ -120,7 +120,7 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "Socket.IO",
-                level: 5,
+                level: 6,
                 proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/socketio.svg`,
             },
@@ -166,8 +166,8 @@ const SKILLS: Skill[] = [
         items: [
             {
                 name: "GIT",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/git.svg`,
             },
             {
@@ -213,8 +213,8 @@ const SKILLS: Skill[] = [
         items: [
             {
                 name: "VS Code",
-                level: 8,
-                proficiency: "expert",
+                level: 7,
+                proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/vscode.svg`,
             },
             {

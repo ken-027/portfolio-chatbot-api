@@ -111,8 +111,9 @@ const CERTIFICATES: Certificate[] = [
             "https://www.udemy.com/share/102VKE3@1hH-HBkaDluXZ2E3EW-PYqh7Bb4REBT2tXJBVqzCJ6QEtEUhecWr5S578p6FyI1mZg==",
         name: "Microservices with Node JS and React",
         platform: "Udemy",
+        dateCompleted: new Date("2025-06-25"),
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "ongoing",
+        status: "completed",
         skills: [
             "Node.js",
             "Express JS",
@@ -125,6 +126,9 @@ const CERTIFICATES: Certificate[] = [
             "Event-Driven Architecture",
         ],
         provider: "Stephen Grider",
+        certificateLink:
+            "https://www.udemy.com/certificate/UC-6e9483a6-4a39-46b5-b659-5acb8681c5e4",
+        certificateImage: `${BASE_URL}/images/certificates/nodejs-microservices-certificate.jpg`,
     },
     {
         courseLink:
