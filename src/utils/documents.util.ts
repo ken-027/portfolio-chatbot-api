@@ -1,11 +1,12 @@
+import ABOUT_ME from "@/constant/about-me";
 import CERTIFICATES from "@/constant/certificates";
 import CONTACTS from "@/constant/contacts";
 import EXPERIENCES from "@/constant/experiences";
 import HOBBIES from "@/constant/hobbies";
 import INFO from "@/constant/info";
 import PROJECTS from "@/constant/projects";
-import SERVICES from "@/constant/services";
 import SKILLS from "@/constant/skills";
+import WHAT_I_DO from "@/constant/what-i-do";
 import { Project } from "@/types";
 
 export const skills = SKILLS.map((skill) => {
@@ -36,8 +37,9 @@ export const projects = Object.keys(PROJECTS).map((name) => {
     return response;
 });
 
-export const services = SERVICES.map(
-    ({ description, title }) => `Title:${title}, ${description}`,
+export const whatIdo = WHAT_I_DO.map(
+    ({ description, title }) =>
+        `Title:${title}, Descriptions: ${description.join("\n")}`,
 );
 
 export const experiences = EXPERIENCES.map(
@@ -96,6 +98,7 @@ export const contacts = CONTACTS.map(
     ({ link, name }) => `Name: ${name}, Link: ${link}`,
 );
 
+export const aboutMe = ABOUT_ME.map((about) => `About Me: ${about}`);
 export const hobbies = HOBBIES.map((hobby) => `Hobby: ${hobby}`);
 
 export const infos = INFO.map((info) => `INFO: ${info}`);

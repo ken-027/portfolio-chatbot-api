@@ -32,6 +32,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_CASA_V3.pdf`,
         type: "company",
+        projectRole: "pair programmer",
     },
     casa_api: {
         category: "backend",
@@ -49,6 +50,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_CASA_V3.pdf`,
         type: "company",
+        projectRole: "team collaborator",
     },
     fixed_asset: {
         category: "fullstack",
@@ -64,6 +66,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_ACCOUNTING_V2.pdf`,
         type: "company",
+        projectRole: "individual contributor",
     },
     portfolio: {
         category: "frontend",
@@ -83,6 +86,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
         liveDemo: "https://portfolio.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     portfolio_terminal: {
         category: "frontend",
@@ -102,6 +106,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
         liveDemo: "#terminal-styled",
         type: "personal",
+        projectRole: "individual contributor",
     },
     portfolio_api: {
         category: "backend",
@@ -123,6 +128,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-api",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     ticketing_microservices: {
         category: "backend",
@@ -143,6 +149,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         githubRepo: "https://github.com/ken-027/ticketing-microservices",
         dockerLink: "https://hub.docker.com/u/ken027?page=1&search=ticketing-",
         type: "personal",
+        projectRole: "individual contributor",
     },
     dashboard: {
         category: "fullstack",
@@ -162,6 +169,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/LARAVEL_ECOMMERCE_DASHBOARD.pdf`,
         type: "freelance",
+        projectRole: "individual contributor",
     },
     resume_match_gradio: {
         category: "fullstack",
@@ -178,6 +186,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             "https://huggingface.co/spaces/kenneth-andales/resume-match-ai",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     resume_match_ai: {
         category: "backend",
@@ -195,6 +204,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             "https://resume-match-ai-599528b1-cf57-446a-8922-4b5-ec219a74.crewai.com/inputs",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     ai_deep_research: {
         category: "fullstack",
@@ -212,6 +222,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             "https://huggingface.co/spaces/kenneth-andales/ai-deep-research",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     gradio_portfolio_chatbot: {
         category: "fullstack",
@@ -229,6 +240,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     rustify: {
         category: "fullstack",
@@ -249,6 +261,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         githubRepo: "https://github.com/ken-027/rustify",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     job_posting: {
         category: "fullstack",
@@ -267,6 +280,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         githubRepo: "https://github.com/ken-027/laravelfindeasyjob",
         type: "personal",
+        projectRole: "individual contributor",
     },
     invoice_crud: {
         category: "fullstack",
@@ -285,6 +299,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         githubRepo: "https://github.com/ken-027/laravelinvoicecrud",
         type: "personal",
+        projectRole: "individual contributor",
     },
     wiwo: {
         category: "frontend",
@@ -301,6 +316,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         liveDemo: "https://wiwo.ksoftdev.site",
         type: "freelance",
+        projectRole: "individual contributor",
     },
     libre: {
         category: "frontend",
@@ -316,6 +332,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         liveDemo: "https://libre.ksoftdev.site",
         type: "freelance",
+        projectRole: "individual contributor",
     },
     educat: {
         category: "frontend",
@@ -332,6 +349,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         githubRepo: "https://github.com/ken-027/educat-landing",
         liveDemo: "https://educat.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     agency_match: {
         category: "frontend",
@@ -348,6 +366,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         githubRepo: "https://github.com/ken-027/agency-match",
         liveDemo: "https://agency-match.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     trabook: {
         category: "frontend",
@@ -364,6 +383,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         githubRepo: "https://github.com/ken-027/trabook",
         liveDemo: "https://trabook.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     e_commerce: {
         category: "fullstack",
@@ -376,6 +396,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("php", backend),
         ],
         type: "freelance",
+        projectRole: "individual contributor",
     },
     mta: {
         category: "fullstack",
@@ -393,6 +414,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("maria db", database),
         ],
         type: "company",
+        projectRole: "team collaborator",
     },
     llda: {
         category: "fullstack",
@@ -410,6 +432,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("maria db", database),
         ],
         type: "company",
+        projectRole: "team collaborator",
     },
     csrm: {
         category: "frontend",
@@ -423,6 +446,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("jquery", frontend),
         ],
         type: "company",
+        projectRole: "pair programmer",
     },
     csrm_api: {
         category: "backend",
@@ -434,6 +458,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("mysql", database),
         ],
         type: "company",
+        projectRole: "individual contributor",
     },
     ema: {
         category: "fullstack",
@@ -449,6 +474,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("mysql", database),
         ],
         type: "company",
+        projectRole: "team collaborator",
     },
     // recipe_api: {
     //     category: "backend",
@@ -494,6 +520,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             "https://huggingface.co/spaces/kenneth-andales/anime-audio-translator",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     py_to_any: {
         category: "fullstack",
@@ -511,6 +538,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             "https://huggingface.co/spaces/kenneth-andales/py-code-converter",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
 };
 

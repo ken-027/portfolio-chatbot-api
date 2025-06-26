@@ -1,11 +1,13 @@
+import ABOUT_ME from "@/constant/about-me";
 import CERTIFICATES from "@/constant/certificates";
 import DEVELOPER_PLATFORM from "@/constant/developer-platform";
 import EXPERIENCES from "@/constant/experiences";
 import PROJECTS from "@/constant/projects";
 import SERVICES from "@/constant/services";
 import SKILLS from "@/constant/skills";
+import WHAT_I_DO from "@/constant/what-i-do";
+import { getTotalYears } from "@/utils/date.utils";
 import { Request, Response } from "express";
-import moment from "moment";
 
 /**
  * @swagger
@@ -101,22 +103,7 @@ export async function getTotalYearsExperience(
 ) {
     const experiences = EXPERIENCES;
 
-    const daysOfExperience = experiences
-        .map(({ startDate, endDate }) =>
-            moment(endDate === "Present" ? new Date() : endDate).diff(
-                startDate,
-                "days",
-            ),
-        )
-        .reduce((total, value) => total + value, 0);
-
-    const start = moment();
-    const end = moment().add(daysOfExperience, "days");
-
-    const monthsOfExperience = end.diff(start, "months");
-
-    const years = Math.floor(monthsOfExperience / 12);
-    const months = monthsOfExperience % 12;
+    const { years, months } = getTotalYears(experiences);
 
     return response.json({ years, months });
 }
@@ -375,4 +362,74 @@ export async function platforms(
 ) {
     const platforms = DEVELOPER_PLATFORM;
     response.json({ platforms });
+}
+
+/**
+ * @swagger
+ * /api/v1/portfolio/about-me:
+ *   get:
+ *     summary: Get info about me
+ *     tags: [Portfolio]
+ *     responses:
+ *       200:
+ *         description: info's about me
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 aboutMe:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *                     example: I'm a software developer with years of experiences
+ */
+export async function aboutMe(
+    _request: Request<never, unknown>,
+    response: Response,
+) {
+    const aboutMe = ABOUT_ME;
+    response.json({ aboutMe });
+}
+
+
+/**
+ * @swagger
+ * /api/v1/portfolio/what-i-do:
+ *   get:
+ *     summary: Get all services
+ *     tags: [Portfolio]
+ *     responses:
+ *       200:
+ *         description: A list of available services
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 whatIDo:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       title:
+ *                         type: string
+ *                         example: Web Development
+ *                       description:
+ *                         type: array
+ *                         items:
+ *                           type: string
+ *                           properties:
+ *                             example: Building responsive and modern websites.
+ *                       image:
+ *                         type: string
+ *                         example: https://example.com/images/web-development.png
+ */
+
+export async function whatIDo(
+    _request: Request<never, unknown>,
+    response: Response,
+) {
+    const whatIDo = WHAT_I_DO;
+    response.json({ whatIDo });
 }

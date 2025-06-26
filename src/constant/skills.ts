@@ -109,7 +109,7 @@ const SKILLS: Skill[] = [
             {
                 name: "Python",
                 level: 5,
-                proficiency: "intermediate",
+                proficiency: "beginner",
                 icon: `${BASE_URL}/icons/python.svg`,
             },
             {
