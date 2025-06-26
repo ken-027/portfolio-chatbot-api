@@ -45,6 +45,10 @@ export interface Experience {
 export type Category = "fullstack" | "frontend" | "backend";
 
 export type ProjectType = "personal" | "freelance" | "company";
+export type ProjectRole =
+    | "individual contributor"
+    | "pair programmer"
+    | "team collaborator";
 
 export interface Project {
     thumbnailLink?: string;
@@ -58,6 +62,7 @@ export interface Project {
     type: ProjectType;
     aiPowered?: boolean;
     dockerLink?: string;
+    projectRole: ProjectRole;
 }
 
 export const CATEGORIES: Category[] = ["frontend", "backend", "fullstack"];
@@ -97,6 +102,12 @@ export type ProjectName =
 export interface Service {
     title: string;
     description: string;
+    image: string;
+}
+
+export interface WhatIDo {
+    title: string;
+    description: string[];
     image: string;
 }
 

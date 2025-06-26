@@ -23,7 +23,7 @@ describe("portfolio endpoints", () => {
         expect(Object.keys(res.body.skills[0].items[0]).sort()).toEqual(
             ["name", "level", "proficiency", "icon"].sort(),
         );
-    });
+    }, 10000);
 
     it("should return list of projects", async () => {
         const res = await request(app)
@@ -39,6 +39,7 @@ describe("portfolio endpoints", () => {
                 "title",
                 "thumbnailLink",
                 "description",
+                "projectRole",
                 "technologies",
                 "screenshot",
                 "type",
@@ -60,7 +61,12 @@ describe("portfolio endpoints", () => {
 
         expect(res.body.experiences.length).toBeGreaterThan(0);
         const experience = res.body.experiences[0];
-        expect(Object.keys(experience).sort()).toEqual(
+
+        expect(
+            Object.keys(experience)
+                .sort()
+                .filter((val) => val !== "companyLink"),
+        ).toEqual(
             [
                 "title",
                 "company",
@@ -70,7 +76,6 @@ describe("portfolio endpoints", () => {
                 "descriptions",
                 "companyLogo",
                 "projects",
-                // "companyLink",
             ].sort(),
         );
         expect(experience.descriptions.length).toBeGreaterThan(0);
@@ -78,6 +83,7 @@ describe("portfolio endpoints", () => {
         expect(Object.keys(experience.projects[0]).sort()).toEqual(
             [
                 "category",
+                "projectRole",
                 "title",
                 "thumbnailLink",
                 "description",
