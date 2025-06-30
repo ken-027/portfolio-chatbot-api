@@ -33,7 +33,7 @@ const WHAT_I_DO: WhatIDo[] = [
         title: "AI & Modern Technologies",
         description: [
             "Integrate AI tools like chatbots and recommendation systems",
-            "Implement data insights and smart functionality into applications",
+            "Build agentic AI systems and autonomous agents for complex tasks",
             "Stay current with emerging technologies and best practices",
         ],
         image: `${BASE_URL}/images/services/ai-integration.svg`,

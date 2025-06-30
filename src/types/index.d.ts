@@ -97,7 +97,8 @@ export type ProjectName =
     | "ai_deep_research"
     | "resume_match_gradio"
     | "ticketing_microservices"
-    | "resume_match_ai";
+    | "resume_match_ai"
+    | "agentic_api"
 
 export interface Service {
     title: string;
