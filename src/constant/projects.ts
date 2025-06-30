@@ -7,6 +7,7 @@ const backend = SKILLS[1].items;
 const database = SKILLS[2].items;
 const ai_integration = SKILLS[5].items;
 const tools = SKILLS[4].items;
+const dev_ops = SKILLS[3].items;
 
 const getSkillByName = (name: string, skills: ItemSkill[]) =>
     (skills.find(
@@ -19,7 +20,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "EkoopBanker Plus CASA V3 (UI)",
         thumbnailLink: `${BASE_URL}/images/projects/casa-thumbnail.png`,
         description:
-            "A core banking system that handles banking transactions and generates financial reports.",
+            "Modern UI for a core banking system, enabling seamless transactions and financial reporting.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("typescript", frontend),
@@ -31,13 +32,14 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_CASA_V3.pdf`,
         type: "company",
+        projectRole: "pair programmer",
     },
     casa_api: {
         category: "backend",
         title: "EkoopBanker Plus CASA V3 (API)",
         thumbnailLink: `${BASE_URL}/images/projects/casa-thumbnail.png`,
         description:
-            "A core banking system that handles banking transactions and generates financial reports.",
+            "Robust backend API powering banking operations and real-time financial data.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("node js", backend),
@@ -48,13 +50,14 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_CASA_V3.pdf`,
         type: "company",
+        projectRole: "team collaborator",
     },
     fixed_asset: {
         category: "fullstack",
         title: "EkoopBanker Plus Accounting V2",
         thumbnailLink: `${BASE_URL}/images/projects/accounting-thumbnail.png`,
         description:
-            "An accounting system that manages fixed asset transactions and generates detailed reports for asset management.",
+            "Accounting system for managing fixed assets and generating detailed reports.",
         technologies: [
             getSkillByName("csharp", backend),
             getSkillByName("asp.net", backend),
@@ -63,40 +66,47 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/EKOOPBANKER_PLUS_ACCOUNTING_V2.pdf`,
         type: "company",
+        projectRole: "individual contributor",
     },
     portfolio: {
         category: "frontend",
         title: "Portfolio Site",
         thumbnailLink: `${BASE_URL}/images/projects/portfolio-site-thumbnail.png`,
         description:
-            "A simple portfolio website that showcases my experiences, projects, and services",
+            "Personal website showcasing my skills, projects, and services in a clean layout.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("css", frontend),
             getSkillByName("html", frontend),
             getSkillByName("react js", frontend),
             getSkillByName("tailwind css", frontend),
+            getSkillByName("docker", dev_ops),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
-        liveDemo: "https://kenneth-andales.github.io",
+        dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
+        liveDemo: "https://portfolio.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     portfolio_terminal: {
         category: "frontend",
         title: "Terminal-Styled Portfolio",
         thumbnailLink: `${BASE_URL}/images/projects/terminal-based-portfolio.png`,
         description:
-            "A terminal-style portfolio website designed to showcase my skills, featured projects, and professional services with a nostalgic command-line interface.",
+            "Portfolio site with a nostalgic terminal interface to highlight my work and skills.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("css", frontend),
             getSkillByName("html", frontend),
             getSkillByName("react js", frontend),
             getSkillByName("tailwind css", frontend),
+            getSkillByName("docker", dev_ops),
         ],
         githubRepo: "https://github.com/ken-027/portfolio",
+        dockerLink: "https://hub.docker.com/r/ken027/portfolio-site",
         liveDemo: "#terminal-styled",
         type: "personal",
+        projectRole: "individual contributor",
     },
     portfolio_api: {
         category: "backend",
@@ -104,24 +114,69 @@ const PROJECTS: Record<ProjectName, Project> = {
         thumbnailLink: `${BASE_URL}/images/projects/portfolio-chatbot-api.png`,
         liveDemo: "https://portfolio-api.ksoftdev.site/api-docs",
         description:
-            "Built a simple portfolio with chatbot API that combines OpenAI's frontend model with Retrieval-Augmented Generation (RAG), using MongoDB's Vector Search for embedding-based document retrieval to provide more relevant and context-aware responses.",
+            "API with AI-powered chatbot using RAG and MongoDB Vector Search for smart responses.",
         technologies: [
             getSkillByName("typescript", frontend),
             getSkillByName("node js", backend),
             getSkillByName("express js", backend),
-            getSkillByName("express js", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("docker", dev_ops),
+            getSkillByName("jest", tools),
+            getSkillByName("vector db", database),
         ],
         githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
+        dockerLink: "https://hub.docker.com/r/ken027/portfolio-api",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
+    },
+    ticketing_microservices: {
+        category: "backend",
+        title: "Nodejs Ticketing Microservices",
+        thumbnailLink: `${BASE_URL}/images/projects/nodejs-ticketing-microservices.png`,
+        description:
+            "Microservices-based ticketing system with event-driven architecture and Kubernetes.",
+        technologies: [
+            getSkillByName("typescript", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("express js", backend),
+            getSkillByName("mongodb", database),
+            getSkillByName("jest", tools),
+            getSkillByName("npm", tools),
+            getSkillByName("docker", dev_ops),
+            getSkillByName("kubernetes", dev_ops),
+        ],
+        githubRepo: "https://github.com/ken-027/ticketing-microservices",
+        dockerLink: "https://hub.docker.com/u/ken027?page=1&search=ticketing-",
+        type: "personal",
+        projectRole: "individual contributor",
+    },
+    agentic_api: {
+        category: "backend",
+        title: "Autonomous Agents API",
+        thumbnailLink: `${BASE_URL}/images/projects/autonomous-agents-api-thumbnail.png`,
+        description:
+            "API platform for deploying and orchestrating autonomous AI agents with LangGraph workflows, built with TypeScript and Express.js.",
+        technologies: [
+            getSkillByName("typescript", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("express js", backend),
+            getSkillByName("jest", tools),
+            getSkillByName("openai", ai_integration),
+            getSkillByName("langgraph", ai_integration),
+        ],
+        liveDemo: "https://agentic-api.ksoftdev.site/api-docs",
+        githubRepo: "https://github.com/ken-027/autonomous-agents-api",
+        aiPowered: true,
+        type: "personal",
+        projectRole: "individual contributor",
     },
     dashboard: {
         category: "fullstack",
         title: "E-commerce Dashboard",
         thumbnailLink: `${BASE_URL}/images/projects/ecommerce-dashboard-thumbnail.png`,
         description:
-            "A comprehensive dashboard designed for efficient inventory management in an e-commerce setting. Enables seamless tracking, updating, and categorization of products with real-time data interaction. Features include intuitive product organization, stock level monitoring, and streamlined workflows for managing item details, availability, and updates.",
+            "Dashboard for real-time inventory management and product tracking in e-commerce.",
         technologies: [
             getSkillByName("css", frontend),
             getSkillByName("html", frontend),
@@ -134,22 +189,60 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         screenshot: `${BASE_URL}/pdf/LARAVEL_ECOMMERCE_DASHBOARD.pdf`,
         type: "freelance",
+        projectRole: "individual contributor",
+    },
+    resume_match_gradio: {
+        category: "fullstack",
+        title: "Resume Match Gradio",
+        thumbnailLink: `${BASE_URL}/images/projects/resume-match-gradio.png`,
+        description:
+            "AI app that analyzes resumes, finds jobs, and suggests improvements using CrewAI and Gradio.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("gradio", tools),
+        ],
+        githubRepo: "https://github.com/ken-027/resume-match-gradio",
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/resume-match-ai",
+        type: "personal",
+        aiPowered: true,
+        projectRole: "individual contributor",
+    },
+    resume_match_ai: {
+        category: "backend",
+        title: "Resume Match App",
+        thumbnailLink: `${BASE_URL}/images/projects/resume-match-ai.png`,
+        description:
+            "Multi-agent AI app for resume analysis, job matching, and personalized feedback.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("anthropic", ai_integration),
+            getSkillByName("crewai", ai_integration),
+        ],
+        githubRepo: "https://github.com/ken-027/resume-match-ai",
+        liveDemo:
+            "https://resume-match-ai-599528b1-cf57-446a-8922-4b5-ec219a74.crewai.com/inputs",
+        type: "personal",
+        aiPowered: true,
+        projectRole: "individual contributor",
     },
     ai_deep_research: {
         category: "fullstack",
         title: "AI Deep Research",
         thumbnailLink: `${BASE_URL}/images/projects/ai-deep-research.png`,
         description:
-            "AI Deep Research generates in-depth AI-powered reports and emails them to users using EmailJS, with a third-party rate limiter ensuring fair usage.",
+            "Generates in-depth AI-powered reports and delivers them via email with usage control.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("gradio", tools),
         ],
         githubRepo: "https://github.com/ken-027/ai-deep-research",
         liveDemo:
             "https://huggingface.co/spaces/kenneth-andales/ai-deep-research",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     gradio_portfolio_chatbot: {
         category: "fullstack",
@@ -158,14 +251,16 @@ const PROJECTS: Record<ProjectName, Project> = {
         liveDemo:
             "https://huggingface.co/spaces/kenneth-andales/portfolio_chatbot",
         description:
-            "Built an interactive chatbot using Gradio in Python for showcasing my portfolio. Integrated custom tools and a rate-limited third-party API built with Express.js to handle user requests efficiently and securely.",
+            "AI-powered portfolio chatbot built with Gradio, featuring interactive conversations and secure user requests via a custom third-party API.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("gradio", tools),
         ],
         githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     rustify: {
         category: "fullstack",
@@ -173,7 +268,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         thumbnailLink: `${BASE_URL}/images/projects/rustify.png`,
         liveDemo: "https://rustify.ksoftdev.site",
         description:
-            "A simple conversion tool for converting js/ts code to rust code using Anthropic AI.",
+            "Converts JavaScript/TypeScript code to Rust using Anthropic AI for fast prototyping.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("typescript", frontend),
@@ -186,13 +281,14 @@ const PROJECTS: Record<ProjectName, Project> = {
         githubRepo: "https://github.com/ken-027/rustify",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     job_posting: {
         category: "fullstack",
         title: "Job Posting",
         thumbnailLink: `${BASE_URL}/images/projects/job-posting-thumbnail.png`,
         description:
-            "A simple job posting site that allows users to create, manage, and track job listings.",
+            "Simple platform for creating, managing, and tracking job listings online.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -204,13 +300,14 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         githubRepo: "https://github.com/ken-027/laravelfindeasyjob",
         type: "personal",
+        projectRole: "individual contributor",
     },
     invoice_crud: {
         category: "fullstack",
         title: "Invoice CRUD",
         thumbnailLink: `${BASE_URL}/images/projects/invoice-crud-thumbnail.png`,
         description:
-            "A simple CRUD application for efficiently managing and processing invoice.",
+            "CRUD app for efficient invoice management and processing.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -222,13 +319,14 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         githubRepo: "https://github.com/ken-027/laravelinvoicecrud",
         type: "personal",
+        projectRole: "individual contributor",
     },
     wiwo: {
         category: "frontend",
         title: "Wilson Works Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/wilson-works-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Responsive landing page with smooth animations for an engaging user experience.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("css", frontend),
@@ -236,30 +334,32 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
             getSkillByName("tailwind css", frontend),
         ],
-        liveDemo: "https://kenneth-andales.github.io/wilson-works/",
+        liveDemo: "https://wiwo.ksoftdev.site",
         type: "freelance",
+        projectRole: "individual contributor",
     },
     libre: {
         category: "frontend",
         title: "Libre Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/libre-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Clean, responsive landing page with subtle animations for modern web presence.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
             getSkillByName("javascript", frontend),
             getSkillByName("react js", frontend),
         ],
-        liveDemo: "https://kenneth-andales.github.io/libre/",
+        liveDemo: "https://libre.ksoftdev.site",
         type: "freelance",
+        projectRole: "individual contributor",
     },
     educat: {
         category: "frontend",
         title: "Educat Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/educat-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Modern, responsive landing page designed for educational platforms.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
@@ -267,15 +367,16 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/educat-landing",
-        liveDemo: "https://kenneth-andales.github.io/educat/",
+        liveDemo: "https://educat.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     agency_match: {
         category: "frontend",
         title: "AgencyMatch Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/agency-match-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Responsive landing page with smooth animations for agency branding.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
@@ -283,15 +384,16 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/agency-match",
-        liveDemo: "https://kenneth-andales.github.io/agency-match/",
+        liveDemo: "https://agency-match.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     trabook: {
         category: "frontend",
         title: "TraBook Landing Page",
         thumbnailLink: `${BASE_URL}/images/projects/trabook-thumbnail.png`,
         description:
-            "A simple, responsive landing page with subtle animations to enhance user experience across devices.",
+            "Attractive, responsive landing page for travel-related services.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("sass", frontend),
@@ -299,26 +401,28 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
         ],
         githubRepo: "https://github.com/ken-027/trabook",
-        liveDemo: "https://kenneth-andales.github.io/trabook/",
+        liveDemo: "https://trabook.ksoftdev.site",
         type: "personal",
+        projectRole: "individual contributor",
     },
     e_commerce: {
         category: "fullstack",
         title: "Buyback E-commerce Website",
         description:
-            "An e-commerce site that allows customers to sell their old devices, with the option to check if their device is listed on the platform before selling.",
+            "E-commerce platform for customers to sell old devices and check listings easily.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("bootstrap", frontend),
             getSkillByName("php", backend),
         ],
         type: "freelance",
+        projectRole: "individual contributor",
     },
     mta: {
         category: "fullstack",
         title: "DSWD Minor Travelling Abroad",
         description:
-            "A government website for the Department of Social Welfare and Development (DSWD) that facilitates booking and approval of travel for minors.",
+            "Government site for booking and approving minor travel with user-friendly workflows.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -330,12 +434,13 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("maria db", database),
         ],
         type: "company",
+        projectRole: "team collaborator",
     },
     llda: {
         category: "fullstack",
         title: "Laguna Lake Development Authority",
         description:
-            "A government website for the Laguna Lake Development Authority (LLDA) that handles the approval process and certification for activities in the Laguna region.",
+            "Certification and approval platform for activities in the Laguna region.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -347,12 +452,13 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("maria db", database),
         ],
         type: "company",
+        projectRole: "team collaborator",
     },
     csrm: {
         category: "frontend",
         title: "Customer Service Record Management System (UI)",
         description:
-            "An internal customer service system designed to efficiently manage customer interactions, inquiries, and support requests.",
+            "UI for managing customer interactions and support requests efficiently.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -360,23 +466,25 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("jquery", frontend),
         ],
         type: "company",
+        projectRole: "pair programmer",
     },
     csrm_api: {
         category: "backend",
         title: "Customer Service Record Management System (API)",
         description:
-            "An internal customer service system designed to efficiently manage customer interactions, inquiries, and support requests.",
+            "Backend API for handling customer service records and support data.",
         technologies: [
             getSkillByName("php", backend),
             getSkillByName("mysql", database),
         ],
         type: "company",
+        projectRole: "individual contributor",
     },
     ema: {
         category: "fullstack",
         title: "EMA V2 E-commerce Website",
         description:
-            "An e-commerce platform for managing merchant products, enabling seamless product listing, updates, and inventory tracking.",
+            "E-commerce platform for merchants to manage products and inventory with ease.",
         technologies: [
             getSkillByName("html", frontend),
             getSkillByName("javascript", frontend),
@@ -386,6 +494,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("mysql", database),
         ],
         type: "company",
+        projectRole: "team collaborator",
     },
     // recipe_api: {
     //     category: "backend",
@@ -419,27 +528,37 @@ const PROJECTS: Record<ProjectName, Project> = {
         title: "Anime Audio Translator",
         thumbnailLink: `${BASE_URL}/images/projects/anime-audio-translator.png`,
         description:
-            "Translate Japanese anime audio into English and Filipino (Tagalog) using Gradio, OpenAI and HuggingFace open-source models running on google colab.",
-        technologies: [getSkillByName("python", backend)],
+            "Transcribes and translates anime audio using Gradio, Whisper, and Anthropic Claude.",
+        technologies: [
+            getSkillByName("python", backend),
+            getSkillByName("openai", ai_integration),
+            getSkillByName("anthropic", ai_integration),
+            getSkillByName("gradio", tools),
+        ],
         githubRepo: "https://github.com/ken-027/anime-dialog-translator",
+        liveDemo:
+            "https://huggingface.co/spaces/kenneth-andales/anime-audio-translator",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
     py_to_any: {
         category: "fullstack",
         title: "Python Code to Any",
         thumbnailLink: `${BASE_URL}/images/projects/code_conversion.png`,
         description:
-            "A simple code conversion tool that converts Python code to any programming frontend like cpp, javascript and php using openai and anthropic",
+            "Converts Python code to other languages using OpenAI and Anthropic for fast prototyping.",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("openai", ai_integration),
+            getSkillByName("gradio", tools),
         ],
         githubRepo: "https://github.com/ken-027/py-to-any",
         liveDemo:
             "https://huggingface.co/spaces/kenneth-andales/py-code-converter",
         type: "personal",
         aiPowered: true,
+        projectRole: "individual contributor",
     },
 };
 

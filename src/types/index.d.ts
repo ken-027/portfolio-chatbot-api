@@ -15,12 +15,14 @@ export interface Email {
 export interface Certificate {
     name: string;
     platform: string;
+    provider: string;
     platformLogo?: string;
-    dateCompleted: Date | "ongoing";
-    description: string;
+    dateCompleted?: Date;
     certificateLink?: string;
     certificateImage?: string;
     courseLink?: string;
+    skills: string[];
+    status: "ongoing" | "plan" | "completed";
 }
 
 export interface Contact {
@@ -37,11 +39,16 @@ export interface Experience {
     descriptions: string[];
     companyLogo?: string;
     projects?: Project[];
+    companyLink?: string;
 }
 
 export type Category = "fullstack" | "frontend" | "backend";
 
 export type ProjectType = "personal" | "freelance" | "company";
+export type ProjectRole =
+    | "individual contributor"
+    | "pair programmer"
+    | "team collaborator";
 
 export interface Project {
     thumbnailLink?: string;
@@ -54,6 +61,8 @@ export interface Project {
     category: Category;
     type: ProjectType;
     aiPowered?: boolean;
+    dockerLink?: string;
+    projectRole: ProjectRole;
 }
 
 export const CATEGORIES: Category[] = ["frontend", "backend", "fullstack"];
@@ -85,7 +94,11 @@ export type ProjectName =
     | "portfolio_api"
     | "portfolio_terminal"
     | "gradio_portfolio_chatbot"
-    | "ai_deep_research";
+    | "ai_deep_research"
+    | "resume_match_gradio"
+    | "ticketing_microservices"
+    | "resume_match_ai"
+    | "agentic_api"
 
 export interface Service {
     title: string;
@@ -93,8 +106,14 @@ export interface Service {
     image: string;
 }
 
+export interface WhatIDo {
+    title: string;
+    description: string[];
+    image: string;
+}
+
 export type Level = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
-export type Proficiency = "confident" | "comfortable" | "exploring";
+export type Proficiency = "beginner" | "intermediate" | "expert";
 
 export interface ItemSkill {
     name: string;
@@ -119,3 +138,9 @@ export interface SessionMessages extends SessionData {
 export type SessionRequest = Request & {
     session: SessionMessages;
 };
+
+export interface DeveloperPlatform {
+    icon: string;
+    link: string;
+    name: string;
+}
