@@ -151,6 +151,26 @@ const PROJECTS: Record<ProjectName, Project> = {
         type: "personal",
         projectRole: "individual contributor",
     },
+    agentic_api: {
+        category: "backend",
+        title: "Autonomous Agents API",
+        thumbnailLink: `${BASE_URL}/images/projects/autonomous-agents-api-thumbnail.png`,
+        description:
+            "API platform for deploying and orchestrating autonomous AI agents with LangGraph workflows, built with TypeScript and Express.js.",
+        technologies: [
+            getSkillByName("typescript", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("express js", backend),
+            getSkillByName("jest", tools),
+            getSkillByName("openai", ai_integration),
+            getSkillByName("langgraph", ai_integration),
+        ],
+        liveDemo: "https://agentic-api.ksoftdev.site/api-docs",
+        githubRepo: "https://github.com/ken-027/autonomous-agents-api",
+        aiPowered: true,
+        type: "personal",
+        projectRole: "individual contributor",
+    },
     dashboard: {
         category: "fullstack",
         title: "E-commerce Dashboard",
