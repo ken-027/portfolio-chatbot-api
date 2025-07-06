@@ -6,6 +6,7 @@
         "build": "tspc --build && node esbuild.config.js && node swagger-build.js && npm run copy-template",
         "build:automate": "npm run build && npm run vercel:deploy",
         "start": "SET NODE_ENV=production && node build/index.js",
+        "start-docker": "NODE_ENV=production && node build/index.js",
         "dev": "nodemon",
         "prepare": "ts-patch install -s",
         "test": "jest",

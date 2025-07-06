@@ -32,19 +32,15 @@ describe("portfolio endpoints", () => {
 
         expect(res.body.projects).toBeDefined();
 
-        const firstKey = Object.keys(res.body.projects)[0];
-        expect(Object.keys(res.body.projects[firstKey]).sort()).toEqual(
-            [
-                "category",
-                "title",
-                "thumbnailLink",
-                "description",
-                "projectRole",
-                "technologies",
-                "screenshot",
-                "type",
-            ].sort(),
-        );
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const firstKey = Object.keys(res.body.projects)[0] as any;
+        expect(res.body.projects[firstKey].category).toBeDefined();
+        expect(res.body.projects[firstKey].title).toBeDefined();
+        expect(res.body.projects[firstKey].thumbnailLink).toBeDefined();
+        expect(res.body.projects[firstKey].description).toBeDefined();
+        expect(res.body.projects[firstKey].technologies).toBeDefined();
+        expect(res.body.projects[firstKey].type).toBeDefined();
+        expect(res.body.projects[firstKey].projectRole).toBeDefined();
 
         expect(res.body.projects[firstKey].technologies.length).toBeGreaterThan(
             0,

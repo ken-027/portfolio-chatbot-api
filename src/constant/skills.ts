@@ -154,6 +154,12 @@ const SKILLS: Skill[] = [
                 icon: `${BASE_URL}/icons/mongodb.svg`,
             },
             {
+                name: "Postgres",
+                level: 4,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/postgres.svg`,
+            },
+            {
                 name: "Vector DB",
                 level: 4,
                 proficiency: "beginner",
@@ -258,6 +264,12 @@ const SKILLS: Skill[] = [
                 level: 6,
                 proficiency: "intermediate",
                 icon: `${BASE_URL}/icons/npm.svg`,
+            },
+            {
+                name: "Drizzle",
+                level: 4,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/drizzle.svg`,
             },
         ],
     },
