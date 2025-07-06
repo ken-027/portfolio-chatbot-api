@@ -15,6 +15,28 @@ const getSkillByName = (name: string, skills: ItemSkill[]) =>
     ) as ItemSkill) || [];
 
 const PROJECTS: Record<ProjectName, Project> = {
+    uptime_monitoring: {
+        category: "fullstack",
+        title: "Uptime Monitoring SaaS",
+        thumbnailLink: `${BASE_URL}/images/projects/uptime-monitoring-thumbnail.png`,
+        description:
+            "A full-featured monitoring platform that tracks website and API uptime, with real-time alerts, AI diagnostics, and scheduled check intervals.",
+        technologies: [
+            getSkillByName("tailwind css", frontend),
+            getSkillByName("typescript", frontend),
+            getSkillByName("react js", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("next js", backend),
+            getSkillByName("postgres", database),
+            getSkillByName("drizzle", tools),
+            getSkillByName("mcp", ai_integration),
+        ],
+        liveDemo: "https://uptime-monitoring.ksoftdev.site",
+        githubRepo: "https://github.com/ken-027/uptime-monitoring",
+        type: "personal",
+        projectRole: "individual contributor",
+        aiPowered: true,
+    },
     casa: {
         category: "frontend",
         title: "EkoopBanker Plus CASA V3 (UI)",
