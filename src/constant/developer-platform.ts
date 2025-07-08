@@ -22,6 +22,11 @@ const DEVELOPER_PLATFORM: DEVELOPERPLATFORM[] = [
         icon: `${BASE_URL}/images/developer-platform/npm.svg`,
         link: "https://www.npmjs.com/~ken_27",
     },
+    {
+        name: "Replit ",
+        icon: `${BASE_URL}/images/developer-platform/replit.svg`,
+        link: "https://replit.com/@ken-027",
+    },
     // {
     //     name: "Codewars ",
     //     icon: `${BASE_URL}/images/developer-platform/codewars.svg`,
