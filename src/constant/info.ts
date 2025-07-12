@@ -8,7 +8,7 @@ const INFO: string[] = [
     `Continuously learning and exploring technologies like cloud architecture (AWS), containerization, and AI-assisted development.`,
     `Known for analytical thinking, adaptability, and a collaborative mindset that thrives in cross-functional teams.`,
     `Believes in clear communication, well-documented code, and continuous feedback loops for efficient teamwork.`,
-    `My resume is in ${BASE_URL}/resume/software-developer.pdf`,
+    `My resume is in ${BASE_URL}/resume/kenneth-andales.resume.2025.pdf`,
 ];
 
 export default INFO;

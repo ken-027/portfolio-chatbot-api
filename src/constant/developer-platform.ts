@@ -27,11 +27,11 @@ const DEVELOPER_PLATFORM: DEVELOPERPLATFORM[] = [
         icon: `${BASE_URL}/images/developer-platform/replit.svg`,
         link: "https://replit.com/@ken-027",
     },
-    // {
-    //     name: "Codewars ",
-    //     icon: `${BASE_URL}/images/developer-platform/codewars.svg`,
-    //     link: "https://www.codewars.com/users/ken@27",
-    // },
+    {
+        name: "LeetCode",
+        icon: `${BASE_URL}/images/developer-platform/leetcode.svg`,
+        link: "https://leetcode.com/u/ken-027",
+    },
 ];
 
 export default DEVELOPER_PLATFORM;
