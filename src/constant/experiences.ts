@@ -10,9 +10,9 @@ const EXPERIENCES: Experience[] = [
         startDate: new Date("2023-07-25"),
         endDate: new Date("2025-03-25"),
         descriptions: [
-            "Pair-programmed EkoopBanker Plus CASA V3 frontend using React.js, Next.js, TypeScript, and Redux Toolkit with real-time Socket.IO integration for seamless core banking operations.",
-            "Contributed as team collaborator to backend API development using Node.js, Express.js, and SQL Server, handling banking transactions and financial data processing.",
-            "Independently developed the Fixed Asset module for EkoopBanker Plus Accounting V2 using ASP.NET and C#, delivering complete asset lifecycle management and automated financial reporting.",
+            "Developed frontend of EkoopBanker Plus CASA V3 with React.js, Next.js, TypeScript, and Redux Toolkit with real-time Socket.IO integration for seamless core banking operations.",
+            "Contributed to backend API development using Node.js, Express.js, and SQL Server, handling banking transactions and financial data processing.",
+            "Independently developed a Fixed Asset module for EkoopBanker Plus Accounting V2 using ASP.NET and C#, delivering complete asset lifecycle management and automated financial reporting.",
             "Implemented Crystal Reports integration for regulatory compliance and detailed financial data visualization, ensuring accurate reporting standards.",
         ],
         companyLogo: `${BASE_URL}/images/companies/natcco-logo.svg`,
@@ -27,7 +27,7 @@ const EXPERIENCES: Experience[] = [
         endDate: new Date("2022-05-20"),
         descriptions: [
             "Built comprehensive e-commerce dashboard using Laravel, PHP, and MariaDB with real-time inventory management and product tracking, featuring responsive Bootstrap and jQuery interface.",
-            "Maintained and enhanced existing e-commerce platforms ensuring optimal performance, bug fixes, and feature improvements for ongoing client operations.",
+            "Maintained and enhanced existing e-commerce platforms by optimizing SEO performance and implementing multilingual support to improve accessibility and global reach.",
             "Developed modern landing pages including Wilson Works (React.js with Tailwind CSS) and Libre (React.js with Sass) with smooth animations and contemporary UX design.",
             "Collaborated with cross-functional teams to transform Figma mockups into fully functional user interfaces with seamless API integrations.",
         ],
