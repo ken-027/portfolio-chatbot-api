@@ -135,8 +135,9 @@ const CERTIFICATES: Certificate[] = [
             "https://www.udemy.com/share/1013ja3@oS043JFY0UNL77HWc8_rGbaD2kvGKWfUbI-lhoJMmag0RyTNm8TvvgtboAGX66L3kQ==",
         name: "Data Structures + Algorithms",
         platform: "Udemy",
+        dateCompleted: new Date("2025-07-15"),
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "ongoing",
+        status: "completed",
         skills: [
             "Big O",
             "Algorithms",
@@ -154,6 +155,9 @@ const CERTIFICATES: Certificate[] = [
             "Stacks",
         ],
         provider: "Andrei Neagoie",
+        certificateLink:
+            "https://www.udemy.com/certificate/UC-ab72d5ec-6197-4e2d-895a-2f4c0bc3f909",
+        certificateImage: `${BASE_URL}/images/certificates/data-structures-and-algorithms-certificate.jpg`,
     },
     {
         courseLink:
