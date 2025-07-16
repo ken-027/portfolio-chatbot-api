@@ -36,6 +36,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         type: "personal",
         projectRole: "individual contributor",
         aiPowered: true,
+        dockerLink: "https://hub.docker.com/r/ken027/uptime-monitoring",
     },
     casa: {
         category: "frontend",
@@ -192,6 +193,7 @@ const PROJECTS: Record<ProjectName, Project> = {
         aiPowered: true,
         type: "personal",
         projectRole: "individual contributor",
+        dockerLink: "https://hub.docker.com/r/ken027/agents-api",
     },
     dashboard: {
         category: "fullstack",
