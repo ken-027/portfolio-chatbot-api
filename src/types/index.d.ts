@@ -99,7 +99,8 @@ export type ProjectName =
     | "ticketing_microservices"
     | "resume_match_ai"
     | "agentic_api"
-    | "uptime_monitoring";
+    | "uptime_monitoring"
+    | "ratelimiter_api";
 
 export interface Service {
     title: string;

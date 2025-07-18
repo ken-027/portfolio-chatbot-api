@@ -161,9 +161,15 @@ const SKILLS: Skill[] = [
             },
             {
                 name: "Vector DB",
-                level: 4,
+                level: 3,
                 proficiency: "beginner",
                 icon: `${BASE_URL}/icons/vector-db.svg`,
+            },
+            {
+                name: "Redis",
+                level: 2,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/redis.svg`,
             },
         ],
     },
