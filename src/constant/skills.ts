@@ -271,6 +271,12 @@ const SKILLS: Skill[] = [
                 proficiency: "beginner",
                 icon: `${BASE_URL}/icons/drizzle.svg`,
             },
+            {
+                name: "Better Auth",
+                level: 3,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/better-auth.svg`,
+            },
         ],
     },
     {

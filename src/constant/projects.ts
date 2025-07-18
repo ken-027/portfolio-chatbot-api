@@ -29,6 +29,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("next js", backend),
             getSkillByName("postgres", database),
             getSkillByName("drizzle", tools),
+            getSkillByName("better auth", tools),
             getSkillByName("mcp", ai_integration),
         ],
         liveDemo: "https://uptime-monitoring.ksoftdev.site",
