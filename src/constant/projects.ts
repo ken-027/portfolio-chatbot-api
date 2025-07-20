@@ -210,6 +210,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("express js", backend),
             getSkillByName("docker", dev_ops),
             getSkillByName("redis", database),
+            getSkillByName("jest", tools),
         ],
         liveDemo: "https://ratelimiter-api.ksoftdev.site/api-docs",
         githubRepo: "https://github.com/ken-027/ratelimiter-api",
