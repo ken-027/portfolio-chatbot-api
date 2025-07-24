@@ -4,28 +4,6 @@ import { Certificate } from "@/types";
 const CERTIFICATES: Certificate[] = [
     {
         courseLink:
-            "https://www.udemy.com/share/10bOXH3@2gFWjrfB2kscaF1cPlZCL6m_QrMZDFPf_BnNF18QGpwoEMHzRPKaLt3WW15F3eqfFw==",
-        name: "LLM Engineering",
-        platform: "Udemy",
-        dateCompleted: new Date("2025-05-07"),
-        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        certificateLink:
-            "https://www.udemy.com/certificate/UC-e1862b94-8f6f-4ba0-8d05-bf0a2023920a",
-        certificateImage: `${BASE_URL}/images/certificates/llm-certificate.jpg`,
-        status: "completed",
-        skills: [
-            "Prompt Engineering",
-            "Vector DB",
-            "Python",
-            "RAG",
-            "Gradio",
-            "Fine-tuning",
-            "Hugging Face",
-        ],
-        provider: "Ed Donner - Ligency Team",
-    },
-    {
-        courseLink:
             "https://www.udemy.com/share/10dasB3@X0vZ9F0id4qBL8y2SkOwozeRxp70GD7JWR9cWmjIqnpnf4Efp_JSbUjtitd5gB9yfg==",
         name: "Agentic AI Engineering",
         dateCompleted: new Date("2025-06-12"),
@@ -46,6 +24,28 @@ const CERTIFICATES: Certificate[] = [
         certificateImage: `${BASE_URL}/images/certificates/ai-engineering-certificate.jpg`,
         certificateLink:
             "https://www.udemy.com/certificate/UC-040b9e0b-c8ff-4b47-a1e3-893e80c7ca04",
+    },
+    {
+        courseLink:
+            "https://www.udemy.com/share/10bOXH3@2gFWjrfB2kscaF1cPlZCL6m_QrMZDFPf_BnNF18QGpwoEMHzRPKaLt3WW15F3eqfFw==",
+        name: "LLM Engineering",
+        platform: "Udemy",
+        dateCompleted: new Date("2025-05-07"),
+        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
+        certificateLink:
+            "https://www.udemy.com/certificate/UC-e1862b94-8f6f-4ba0-8d05-bf0a2023920a",
+        certificateImage: `${BASE_URL}/images/certificates/llm-certificate.jpg`,
+        status: "completed",
+        skills: [
+            "Prompt Engineering",
+            "Vector DB",
+            "Python",
+            "RAG",
+            "Gradio",
+            "Fine-tuning",
+            "Hugging Face",
+        ],
+        provider: "Ed Donner - Ligency Team",
     },
     {
         courseLink:
@@ -88,24 +88,24 @@ const CERTIFICATES: Certificate[] = [
         ],
         provider: "Imran Teli",
     },
-    {
-        courseLink:
-            "https://www.udemy.com/share/104coM3@xjybR_4oh_OZZY-lNCA-qu-ewROtCKizj60DXcb9NcOc8-lswhFP4w2FGQeh_5NEjw==",
-        name: "Next.js 15 & React - The Complete Guide",
-        platform: "Udemy",
-        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "plan",
-        skills: [
-            "Next.js 15",
-            "React",
-            "SSR",
-            "SSG",
-            "Pre-rendering",
-            "App Router",
-            "Authentication",
-        ],
-        provider: "Maximilian Schwarzmüller",
-    },
+    // {
+    //     courseLink:
+    //         "https://www.udemy.com/share/104coM3@xjybR_4oh_OZZY-lNCA-qu-ewROtCKizj60DXcb9NcOc8-lswhFP4w2FGQeh_5NEjw==",
+    //     name: "Next.js 15 & React - The Complete Guide",
+    //     platform: "Udemy",
+    //     platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
+    //     status: "plan",
+    //     skills: [
+    //         "Next.js 15",
+    //         "React",
+    //         "SSR",
+    //         "SSG",
+    //         "Pre-rendering",
+    //         "App Router",
+    //         "Authentication",
+    //     ],
+    //     provider: "Maximilian Schwarzmüller",
+    // },
     {
         courseLink:
             "https://www.udemy.com/share/102VKE3@1hH-HBkaDluXZ2E3EW-PYqh7Bb4REBT2tXJBVqzCJ6QEtEUhecWr5S578p6FyI1mZg==",
@@ -174,6 +174,32 @@ const CERTIFICATES: Certificate[] = [
             "kaliLinux",
         ],
         provider: "Zaid Sabih - z Security",
+    },
+    {
+        courseLink: "https://www.hackerrank.com/certificates/3051c3c96b0d",
+        name: "React.js",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-07-23"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["React.js"],
+        provider: "Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/react-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/3051c3c96b0d",
+    },
+    {
+        courseLink: "https://www.hackerrank.com/certificates/b952380c52ba",
+        name: "Node.js",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-07-23"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["Node.js"],
+        provider: "Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/nodejs-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/b952380c52ba",
     },
 ];
 
