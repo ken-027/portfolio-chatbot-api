@@ -22,15 +22,20 @@ const DEVELOPER_PLATFORM: DEVELOPERPLATFORM[] = [
         icon: `${BASE_URL}/images/developer-platform/npm.svg`,
         link: "https://www.npmjs.com/~ken_27",
     },
-    {
-        name: "Replit ",
-        icon: `${BASE_URL}/images/developer-platform/replit.svg`,
-        link: "https://replit.com/@ken-027",
-    },
+    // {
+    //     name: "Replit ",
+    //     icon: `${BASE_URL}/images/developer-platform/replit.svg`,
+    //     link: "https://replit.com/@ken-027",
+    // },
     {
         name: "LeetCode",
         icon: `${BASE_URL}/images/developer-platform/leetcode.svg`,
         link: "https://leetcode.com/u/ken-027",
+    },
+    {
+        name: "HackerRank",
+        icon: `${BASE_URL}/images/developer-platform/hacker-rank.svg`,
+        link: "https://www.hackerrank.com/profile/ken027",
     },
 ];
 
