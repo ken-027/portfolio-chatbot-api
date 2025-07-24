@@ -154,7 +154,7 @@ const SKILLS: Skill[] = [
                 icon: `${BASE_URL}/icons/mongodb.svg`,
             },
             {
-                name: "Postgres",
+                name: "PostgreSQL",
                 level: 4,
                 proficiency: "beginner",
                 icon: `${BASE_URL}/icons/postgres.svg`,
