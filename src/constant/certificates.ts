@@ -176,7 +176,6 @@ const CERTIFICATES: Certificate[] = [
         provider: "Zaid Sabih - z Security",
     },
     {
-        // courseLink: "https://www.hackerrank.com/certificates/3051c3c96b0d",
         name: "Rest API (Intermediate)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-25"),
@@ -189,7 +188,6 @@ const CERTIFICATES: Certificate[] = [
             "https://www.hackerrank.com/certificates/iframe/be46e592f781",
     },
     {
-        // courseLink: "https://www.hackerrank.com/certificates/3051c3c96b0d",
         name: "React.js",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-23"),
@@ -202,7 +200,6 @@ const CERTIFICATES: Certificate[] = [
             "https://www.hackerrank.com/certificates/iframe/3051c3c96b0d",
     },
     {
-        // courseLink: "https://www.hackerrank.com/certificates/b952380c52ba",
         name: "Node.js (Basic)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-23"),
@@ -215,7 +212,6 @@ const CERTIFICATES: Certificate[] = [
             "https://www.hackerrank.com/certificates/iframe/b952380c52ba",
     },
     {
-        // courseLink: "https://www.hackerrank.com/certificates/29f9c9cf5ed8",
         name: "Javascript (Intermediate)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-24"),
@@ -228,7 +224,6 @@ const CERTIFICATES: Certificate[] = [
             "https://www.hackerrank.com/certificates/iframe/29f9c9cf5ed8",
     },
     {
-        // courseLink: "https://www.hackerrank.com/certificates/f53f89b7aa52",
         name: "Javascript (Basic)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-24"),
@@ -239,6 +234,30 @@ const CERTIFICATES: Certificate[] = [
         certificateImage: `${BASE_URL}/images/certificates/javascript-basic-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/f53f89b7aa52",
+    },
+    {
+        name: "Python (Basic)",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-07-25"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["Python"],
+        provider: "Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/python-basic-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/2aba302a9651",
+    },
+    {
+        name: "SQL (Basic)",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-07-25"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["Python"],
+        provider: "Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/sql-basic-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/395a298b448c",
     },
 ];
 
