@@ -177,6 +177,19 @@ const CERTIFICATES: Certificate[] = [
     },
     {
         // courseLink: "https://www.hackerrank.com/certificates/3051c3c96b0d",
+        name: "Rest API (Intermediate)",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-07-25"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["Rest API"],
+        provider: "Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/rest-api-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/be46e592f781",
+    },
+    {
+        // courseLink: "https://www.hackerrank.com/certificates/3051c3c96b0d",
         name: "React.js",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-23"),
