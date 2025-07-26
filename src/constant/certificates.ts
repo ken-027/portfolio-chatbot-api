@@ -182,7 +182,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["Rest API"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/rest-api-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/be46e592f781",
@@ -194,7 +194,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["React.js"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/react-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/3051c3c96b0d",
@@ -206,7 +206,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["Node.js"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/nodejs-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/b952380c52ba",
@@ -218,7 +218,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["Javascript"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/javascript-intermediate-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/29f9c9cf5ed8",
@@ -230,7 +230,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["Javascript"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/javascript-basic-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/f53f89b7aa52",
@@ -242,7 +242,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["Python"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/python-basic-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/2aba302a9651",
@@ -254,7 +254,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["Python"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/sql-intermediate-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/1653a96f44dc",
@@ -266,7 +266,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
         skills: ["Python"],
-        provider: "Harishankaran K",
+        provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/sql-basic-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/395a298b448c",
@@ -278,7 +278,7 @@ const CERTIFICATES: Certificate[] = [
         platformLogo: `${BASE_URL}/images/certificates/simplilearn-logo.png`,
         status: "completed",
         skills: ["PostgreSQL"],
-        provider: "Krishna Kumar",
+        provider: "SimpliLearn - Krishna Kumar",
         certificateImage: `${BASE_URL}/images/certificates/postgresql-certificate.png`,
         certificateLink:
             "https://certificates.simplicdn.net/share/8687500_90642931753510996163.pdf",
