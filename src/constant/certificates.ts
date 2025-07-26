@@ -212,7 +212,7 @@ const CERTIFICATES: Certificate[] = [
             "https://www.hackerrank.com/certificates/iframe/b952380c52ba",
     },
     {
-        name: "Javascript (Intermediate)",
+        name: "JavaScript (Intermediate)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-24"),
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
@@ -224,7 +224,7 @@ const CERTIFICATES: Certificate[] = [
             "https://www.hackerrank.com/certificates/iframe/29f9c9cf5ed8",
     },
     {
-        name: "Javascript (Basic)",
+        name: "JavaScript (Basic)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-24"),
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
@@ -246,6 +246,18 @@ const CERTIFICATES: Certificate[] = [
         certificateImage: `${BASE_URL}/images/certificates/python-basic-certificate.png`,
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/2aba302a9651",
+    },
+    {
+        name: "SQL (Intermediate)",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-07-26"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["Python"],
+        provider: "Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/sql-intermediate-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/1653a96f44dc",
     },
     {
         name: "SQL (Basic)",
