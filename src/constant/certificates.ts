@@ -271,6 +271,18 @@ const CERTIFICATES: Certificate[] = [
         certificateLink:
             "https://www.hackerrank.com/certificates/iframe/395a298b448c",
     },
+    {
+        name: "PostgreSQL",
+        platform: "SimpliLearn",
+        dateCompleted: new Date("2025-07-26"),
+        platformLogo: `${BASE_URL}/images/certificates/simplilearn-logo.png`,
+        status: "completed",
+        skills: ["PostgreSQL"],
+        provider: "Krishna Kumar",
+        certificateImage: `${BASE_URL}/images/certificates/postgresql-certificate.png`,
+        certificateLink:
+            "https://certificates.simplicdn.net/share/8687500_90642931753510996163.pdf",
+    },
 ];
 
 export default CERTIFICATES;
