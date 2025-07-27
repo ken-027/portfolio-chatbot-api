@@ -9,10 +9,15 @@ const ai_integration = SKILLS[5].items;
 const tools = SKILLS[4].items;
 const dev_ops = SKILLS[3].items;
 
-const getSkillByName = (name: string, skills: ItemSkill[]) =>
-    (skills.find(
+const getSkillByName = (name: string, skills: ItemSkill[]) => {
+    const skill = skills.find(
         ({ name: _name }) => name.toLowerCase() === _name.toLowerCase(),
-    ) as ItemSkill) || [];
+    ) as ItemSkill;
+
+    if (!skill) throw new Error(`Skill ${name} not found!`);
+
+    return skill;
+};
 
 const PROJECTS: Record<ProjectName, Project> = {
     uptime_monitoring: {
@@ -27,7 +32,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("react js", frontend),
             getSkillByName("node js", backend),
             getSkillByName("next js", backend),
-            getSkillByName("postgres", database),
+            getSkillByName("postgresql", database),
             getSkillByName("drizzle", tools),
             getSkillByName("better auth", tools),
             getSkillByName("mcp", ai_integration),
