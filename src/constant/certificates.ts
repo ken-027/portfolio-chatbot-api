@@ -283,6 +283,18 @@ const CERTIFICATES: Certificate[] = [
         certificateLink:
             "https://certificates.simplicdn.net/share/8687500_90642931753510996163.pdf",
     },
+    {
+        name: "Basic of SaaS",
+        platform: "SimpliLearn",
+        dateCompleted: new Date("2025-07-27"),
+        platformLogo: `${BASE_URL}/images/certificates/simplilearn-logo.png`,
+        status: "completed",
+        skills: ["SaaS"],
+        provider: "SimpliLearn - Krishna Kumar",
+        certificateImage: `${BASE_URL}/images/certificates/basic-saas-certificate.png`,
+        certificateLink:
+            "https://certificates.simplicdn.net/share/8688983_90642931753528496051.pdf",
+    },
 ];
 
 export default CERTIFICATES;
