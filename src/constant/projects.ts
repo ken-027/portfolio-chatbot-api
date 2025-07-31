@@ -154,7 +154,7 @@ const PROJECTS: Record<ProjectName, Project> = {
             getSkillByName("vector db", database),
             getSkillByName("docker", dev_ops),
         ],
-        githubRepo: "https://github.com/ken-027/portfolio-chatbot-api",
+        githubRepo: "https://github.com/ken-027/portfolio-api",
         dockerLink: "https://hub.docker.com/r/ken027/portfolio-api",
         type: "personal",
         aiPowered: true,
