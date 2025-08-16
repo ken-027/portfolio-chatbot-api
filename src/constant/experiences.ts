@@ -13,6 +13,8 @@ const EXPERIENCES: Experience[] = [
             "Assisting clients in enhancing and maintaining existing web applications",
             "Implementing new features and optimizing system performance based on client requirements",
         ],
+        companyLogo: "",
+        projects: [],
     },
     {
         title: "Mid-Software Developer",
