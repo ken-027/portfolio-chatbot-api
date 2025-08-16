@@ -4,16 +4,28 @@ import { Experience } from "@/types";
 
 const EXPERIENCES: Experience[] = [
     {
+        title: "Freelance Full Stack Developer",
+        company: "Self-Employed",
+        location: "Remote",
+        startDate: new Date("2025-08-01"),
+        endDate: "Present",
+        descriptions: [
+            "Assisting clients in enhancing and maintaining existing web applications",
+            "Implementing new features and optimizing system performance based on client requirements",
+        ],
+    },
+    {
         title: "Mid-Software Developer",
         company: "National Confederation of Cooperatives",
-        location: "WFH",
+        location: "Remote",
         startDate: new Date("2023-07-25"),
         endDate: new Date("2025-03-25"),
         descriptions: [
-            "Developed frontend of EkoopBanker Plus CASA V3 with React.js, Next.js, TypeScript, and Redux Toolkit with real-time Socket.IO integration for seamless core banking operations.",
-            "Contributed to backend API development using Node.js, Express.js, and SQL Server, handling banking transactions and financial data processing.",
-            "Independently developed a Fixed Asset module for EkoopBanker Plus Accounting V2 using ASP.NET and C#, delivering complete asset lifecycle management and automated financial reporting.",
-            "Implemented Crystal Reports integration for regulatory compliance and detailed financial data visualization, ensuring accurate reporting standards.",
+            "Led frontend development of EkoopBanker Plus CASA V3, delivering a real-time user experience for cooperative transactions and mentoring a junior developer",
+            "Contributed to backend APIs enabling secure transactions and accurate financial data across branches",
+            "Developed Fixed Asset module for Accounting V2, supporting full asset lifecycle tracking and automated reports",
+            "Integrated regulatory reporting tools, ensuring compliance and clear financial data visualization",
+            "Maintained legacy production systems, resolving data issues to ensure stability and performance",
         ],
         companyLogo: `${BASE_URL}/images/companies/natcco-logo.svg`,
         projects: [PROJECTS.casa, PROJECTS.casa_api, PROJECTS.fixed_asset],
@@ -22,14 +34,13 @@ const EXPERIENCES: Experience[] = [
     {
         title: "Freelance Full-Stack Developer",
         company: "Self-Employed",
-        location: "WFH",
+        location: "Remote",
         startDate: new Date("2022-01-05"),
         endDate: new Date("2022-05-20"),
         descriptions: [
-            "Built comprehensive e-commerce dashboard using Laravel, PHP, and MariaDB with real-time inventory management and product tracking, featuring responsive Bootstrap and jQuery interface.",
-            "Maintained and enhanced existing e-commerce platforms by optimizing SEO performance and implementing multilingual support to improve accessibility and global reach.",
-            "Developed modern landing pages including Wilson Works (React.js with Tailwind CSS) and Libre (React.js with Sass) with smooth animations and contemporary UX design.",
-            "Collaborated with cross-functional teams to transform Figma mockups into fully functional user interfaces with seamless API integrations.",
+            "Built a responsive e-commerce dashboard with real-time inventory and product management",
+            "Enhanced online store platforms by improving SEO and adding multilingual support for global reach",
+            "Developed animated landing pages with modern UX, boosting user engagement and brand visibility",
         ],
         projects: [
             PROJECTS.dashboard,
@@ -45,14 +56,13 @@ const EXPERIENCES: Experience[] = [
         startDate: new Date("2019-10-10"),
         endDate: new Date("2020-03-17"),
         descriptions: [
-            "Collaborated on government systems including DSWD Minors Travelling Abroad booking platform using PHP, CodeIgniter, and MariaDB with user-friendly approval workflows and document management.",
-            "Maintained Laguna Lake Development Authority certification platform, ensuring system stability and regulatory compliance through structured approval workflows.",
-            "Participated in code reviews and maintained quality standards, reducing technical debt and improving system maintainability across government projects.",
-            "Resolved critical performance issues through collaborative debugging and system optimization techniques.",
+            "Collaborated on government platforms, including a booking and approval system for minors traveling abroad with streamlined workflows and document management",
+            "Maintained certification systems, ensuring regulatory compliance and system stability by implementing structured approval workflows and resolving performance issues through collaborative debugging and optimization",
+            "Conducted code reviews and upheld quality standards, reducing technical debt and enhancing maintainability",
         ],
         companyLogo: `${BASE_URL}/images/companies/cloud-panda-ph-logo.svg`,
         projects: [PROJECTS.mta, PROJECTS.llda],
-        // companyLink: "https://www.cloudpanda.ph",
+        companyLink: "https://www.cloudpanda.ph",
     },
     {
         title: "Jr. Web Developer",
@@ -61,9 +71,8 @@ const EXPERIENCES: Experience[] = [
         startDate: new Date("2018-05-02"),
         endDate: new Date("2019-04-17"),
         descriptions: [
-            "Developed Customer Service Record Management System using HTML, CSS, jQuery, and JavaScript for efficient customer interaction tracking.",
-            "Built backend API using PHP and MySQL for customer service records, support tickets, and comprehensive data management.",
-            "Contributed to EMA V2 e-commerce platform development for merchant product and inventory management using full-stack PHP and MySQL architecture.",
+            "Built a Customer Service Record Management internal website streamlining interaction tracking and improving support efficiency",
+            "Enhanced an e-commerce platform for merchants, improving usability and scalability for product and inventory management",
         ],
         companyLogo: `${BASE_URL}/images/companies/ipp-logo.svg`,
         projects: [PROJECTS.csrm, PROJECTS.csrm_api, PROJECTS.ema],
