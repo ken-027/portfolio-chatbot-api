@@ -53,7 +53,7 @@ const CERTIFICATES: Certificate[] = [
         name: "AI Agents & Autonomous Apps with LangGraph & LangChain",
         platform: "Udemy",
         platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
-        status: "ongoing",
+        status: "plan",
         skills: [
             "LangGraph",
             "LangChain",

@@ -34,7 +34,7 @@ const EXPERIENCES: Experience[] = [
         companyLink: "https://natcco.coop",
     },
     {
-        title: "Freelance Full-Stack Developer",
+        title: "Freelance Full Stack Developer",
         company: "Self-Employed",
         location: "Remote",
         startDate: new Date("2022-01-05"),
