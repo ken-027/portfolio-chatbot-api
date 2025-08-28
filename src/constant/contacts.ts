@@ -7,7 +7,7 @@ const CONTACTS: Contact[] = [
     },
     {
         name: "Upwork",
-        link: "https://www.upwork.com/freelancers/~0135c2e932c50f312f",
+        link: "https://www.upwork.com/freelancers/~0130a2e851c15789e3",
     },
     {
         name: "Gmail",

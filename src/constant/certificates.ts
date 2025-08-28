@@ -286,7 +286,7 @@ const CERTIFICATES: Certificate[] = [
     {
         name: "Basic of SaaS",
         platform: "SimpliLearn",
-        dateCompleted: new Date("2025-07-27"),
+        dateCompleted: new Date("2025-07-26"),
         platformLogo: `${BASE_URL}/images/certificates/simplilearn-logo.png`,
         status: "completed",
         skills: ["SaaS"],

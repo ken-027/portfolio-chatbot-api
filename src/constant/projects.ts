@@ -243,76 +243,25 @@ const PROJECTS: Record<ProjectName, Project> = {
         type: "freelance",
         projectRole: "individual contributor",
     },
-    resume_match_gradio: {
+    gradio_apps: {
         category: "fullstack",
-        title: "Resume Match Gradio",
-        thumbnailLink: `${BASE_URL}/images/projects/resume-match-gradio.png`,
+        title: "Gradio AI Apps",
+        aiPowered: true,
+        projectRole: "individual contributor",
+        thumbnailLink: `${BASE_URL}/images/projects/gradio-apps-thumbnail.png`,
+        liveDemo: "https://huggingface.co/kenneth-andales/spaces",
         description:
-            "AI app that analyzes resumes, finds jobs, and suggests improvements using CrewAI and Gradio.",
+            "A collection of applications including Resume Match, Audio Translator, Deep Research, Chatbot, and Code Converter.",
+        type: "personal",
         technologies: [
             getSkillByName("python", backend),
             getSkillByName("gradio", tools),
-        ],
-        githubRepo: "https://github.com/ken-027/resume-match-gradio",
-        liveDemo:
-            "https://huggingface.co/spaces/kenneth-andales/resume-match-ai",
-        type: "personal",
-        aiPowered: true,
-        projectRole: "individual contributor",
-    },
-    resume_match_ai: {
-        category: "backend",
-        title: "Resume Match App",
-        thumbnailLink: `${BASE_URL}/images/projects/resume-match-ai.png`,
-        description:
-            "Multi-agent AI app for resume analysis, job matching, and personalized feedback.",
-        technologies: [
-            getSkillByName("python", backend),
+            getSkillByName("openai", ai_integration),
             getSkillByName("anthropic", ai_integration),
             getSkillByName("crewai", ai_integration),
         ],
-        githubRepo: "https://github.com/ken-027/resume-match-ai",
-        liveDemo:
-            "https://resume-match-ai-599528b1-cf57-446a-8922-4b5-ec219a74.crewai.com/inputs",
-        type: "personal",
-        aiPowered: true,
-        projectRole: "individual contributor",
-    },
-    ai_deep_research: {
-        category: "fullstack",
-        title: "AI Deep Research",
-        thumbnailLink: `${BASE_URL}/images/projects/ai-deep-research.png`,
-        description:
-            "Generates in-depth AI-powered reports and delivers them via email with usage control.",
-        technologies: [
-            getSkillByName("python", backend),
-            getSkillByName("openai", ai_integration),
-            getSkillByName("gradio", tools),
-        ],
-        githubRepo: "https://github.com/ken-027/ai-deep-research",
-        liveDemo:
-            "https://huggingface.co/spaces/kenneth-andales/ai-deep-research",
-        type: "personal",
-        aiPowered: true,
-        projectRole: "individual contributor",
-    },
-    gradio_portfolio_chatbot: {
-        category: "fullstack",
-        title: "Gradio Portfolio Chatbot",
-        thumbnailLink: `${BASE_URL}/images/projects/gradio-portfolio-chatbot.png`,
-        liveDemo:
-            "https://huggingface.co/spaces/kenneth-andales/portfolio_chatbot",
-        description:
-            "AI-powered portfolio chatbot built with Gradio, featuring interactive conversations and secure user requests via a custom third-party API.",
-        technologies: [
-            getSkillByName("python", backend),
-            getSkillByName("openai", ai_integration),
-            getSkillByName("gradio", tools),
-        ],
-        githubRepo: "https://github.com/ken-027/gradio-portfolio-chatbot",
-        type: "personal",
-        aiPowered: true,
-        projectRole: "individual contributor",
+        githubRepo:
+            "https://github.com/search?q=repo:ken-027%2Fresume-match-gradio+repo:ken-027%2Fresume-match-ai+repo:ken-027%2Fpy-to-any+repo:ken-027%2Fanime-dialog-translator+repo:ken-027%2Fai-deep-research+repo:ken-027%2Fgradio-chatbot&type=repositories&ref=advsearch",
     },
     rustify: {
         category: "fullstack",
@@ -547,70 +496,6 @@ const PROJECTS: Record<ProjectName, Project> = {
         ],
         type: "company",
         projectRole: "team collaborator",
-    },
-    // recipe_api: {
-    //     category: "backend",
-    //     title: "Recipe API",
-    //     thumbnailLink: `${BASE_URL}/images/projects/recipe-api.png`,
-    //     description:
-    //         "A simple CRUD application for managing recipes, instructions, and ingredients.",
-    //     technologies: [
-    //         getSkillByName("php", backend),
-    //         getSkillByName("laravel", backend),
-    //         getSkillByName("mysql", database),
-    //     ],
-    //     githubRepo: "https://github.com/ken-027/laravel-recipe-api",
-    //     type: "personal",
-    // },
-    // order_api: {
-    //     category: "backend",
-    //     title: "Order API",
-    //     thumbnailLink: `${BASE_URL}/images/projects/order-api.png`,
-    //     description: "A simple authentication and CRUD application for orders.",
-    //     technologies: [
-    //         getSkillByName("php", backend),
-    //         getSkillByName("laravel", backend),
-    //         getSkillByName("mysql", database),
-    //     ],
-    //     githubRepo: "https://github.com/ken-027/laravel-orderapi",
-    //     type: "personal",
-    // },
-    anime_dialog_translator: {
-        category: "fullstack",
-        title: "Anime Audio Translator",
-        thumbnailLink: `${BASE_URL}/images/projects/anime-audio-translator.png`,
-        description:
-            "Transcribes and translates anime audio using Gradio, Whisper, and Anthropic Claude.",
-        technologies: [
-            getSkillByName("python", backend),
-            getSkillByName("openai", ai_integration),
-            getSkillByName("anthropic", ai_integration),
-            getSkillByName("gradio", tools),
-        ],
-        githubRepo: "https://github.com/ken-027/anime-dialog-translator",
-        liveDemo:
-            "https://huggingface.co/spaces/kenneth-andales/anime-audio-translator",
-        type: "personal",
-        aiPowered: true,
-        projectRole: "individual contributor",
-    },
-    py_to_any: {
-        category: "fullstack",
-        title: "Python Code to Any",
-        thumbnailLink: `${BASE_URL}/images/projects/code_conversion.png`,
-        description:
-            "Converts Python code to other languages using OpenAI and Anthropic for fast prototyping.",
-        technologies: [
-            getSkillByName("python", backend),
-            getSkillByName("openai", ai_integration),
-            getSkillByName("gradio", tools),
-        ],
-        githubRepo: "https://github.com/ken-027/py-to-any",
-        liveDemo:
-            "https://huggingface.co/spaces/kenneth-andales/py-code-converter",
-        type: "personal",
-        aiPowered: true,
-        projectRole: "individual contributor",
     },
 };
 
