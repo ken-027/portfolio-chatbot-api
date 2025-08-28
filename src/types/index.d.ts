@@ -86,21 +86,14 @@ export type ProjectName =
     | "csrm"
     | "csrm_api"
     | "ema"
-    // | "recipe_api"
-    // | "order_api"
     | "rustify"
-    | "anime_dialog_translator"
-    | "py_to_any"
     | "portfolio_api"
     | "portfolio_terminal"
-    | "gradio_portfolio_chatbot"
-    | "ai_deep_research"
-    | "resume_match_gradio"
     | "ticketing_microservices"
-    | "resume_match_ai"
     | "agentic_api"
     | "uptime_monitoring"
-    | "ratelimiter_api";
+    | "ratelimiter_api"
+    | "gradio_apps";
 
 export interface Service {
     title: string;
