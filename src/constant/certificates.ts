@@ -176,6 +176,18 @@ const CERTIFICATES: Certificate[] = [
         provider: "Zaid Sabih - z Security",
     },
     {
+        name: "Software Engineer",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-09-01"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["Software Engineer"],
+        provider: "HackerRank - Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/software-engineer-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/d8d9afe4fa77",
+    },
+    {
         name: "Rest API (Intermediate)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-25"),
@@ -236,6 +248,18 @@ const CERTIFICATES: Certificate[] = [
             "https://www.hackerrank.com/certificates/iframe/f53f89b7aa52",
     },
     {
+        name: "Problem Solving (Basic)",
+        platform: "Hacker Rank",
+        dateCompleted: new Date("2025-09-01"),
+        platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
+        status: "completed",
+        skills: ["Node.js"],
+        provider: "HackerRank - Harishankaran K",
+        certificateImage: `${BASE_URL}/images/certificates/problem-solving-basic-certificate.png`,
+        certificateLink:
+            "https://www.hackerrank.com/certificates/iframe/8a2604b04ef7",
+    },
+    {
         name: "Python (Basic)",
         platform: "Hacker Rank",
         dateCompleted: new Date("2025-07-25"),
@@ -253,7 +277,7 @@ const CERTIFICATES: Certificate[] = [
         dateCompleted: new Date("2025-07-26"),
         platformLogo: `${BASE_URL}/images/certificates/hackerrank-logo.png`,
         status: "completed",
-        skills: ["Python"],
+        skills: ["SQL"],
         provider: "HackerRank - Harishankaran K",
         certificateImage: `${BASE_URL}/images/certificates/sql-intermediate-certificate.png`,
         certificateLink:
