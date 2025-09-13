@@ -161,6 +161,20 @@ const CERTIFICATES: Certificate[] = [
     },
     {
         courseLink:
+            "https://www.udemy.com/share/10bqOB3@Y57TUlW6qbpb8NTFN749GYUQKup7L-UgpBrrtYEm48eUHs7cjKuY5wHZkcK8W_PHQw==",
+        name: "Rust: The Complete Developer's Guide",
+        platform: "Udemy",
+        dateCompleted: new Date("2025-09-09"),
+        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
+        status: "completed",
+        skills: ["Rust"],
+        provider: "Stephen Grider",
+        certificateLink:
+            "https://www.udemy.com/certificate/UC-fd970454-fa77-4ed4-ab9c-cd143b0112e0",
+        certificateImage: `${BASE_URL}/images/certificates/rust-certificate.jpg`,
+    },
+    {
+        courseLink:
             "https://www.udemy.com/share/101WaI3@55Afd-hgRS9bCh7He9zYyvLm4Wm8EIZFuiBK3RIiQLqTEhB8FOyc5HaUaPYpzkdTdw==",
         name: "Learn Ethical Hacking From Scratch",
         platform: "Udemy",

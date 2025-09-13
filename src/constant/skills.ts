@@ -101,16 +101,22 @@ const SKILLS: Skill[] = [
                 icon: `${BASE_URL}/icons/codeigniter.svg`,
             },
             {
-                name: "Csharp",
-                level: 4,
-                proficiency: "beginner",
-                icon: `${BASE_URL}/icons/csharp.svg`,
-            },
-            {
                 name: "Python",
                 level: 5,
                 proficiency: "beginner",
                 icon: `${BASE_URL}/icons/python.svg`,
+            },
+            {
+                name: "Rust",
+                level: 3,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/rust.svg`,
+            },
+            {
+                name: "Csharp",
+                level: 4,
+                proficiency: "beginner",
+                icon: `${BASE_URL}/icons/csharp.svg`,
             },
             {
                 name: "ASP.NET",
@@ -291,7 +297,7 @@ const SKILLS: Skill[] = [
             {
                 name: "OpenAI",
                 level: 5,
-                proficiency: "intermediate",
+                proficiency: "beginner",
                 icon: `${BASE_URL}/icons/openai.svg`,
             },
             {
