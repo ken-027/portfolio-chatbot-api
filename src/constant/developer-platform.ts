@@ -18,7 +18,7 @@ const DEVELOPER_PLATFORM: DEVELOPERPLATFORM[] = [
         link: "https://huggingface.co/kenneth-andales",
     },
     {
-        name: "NPM ",
+        name: "NPM",
         icon: `${BASE_URL}/images/developer-platform/npm.svg`,
         link: "https://www.npmjs.com/~ken_27",
     },
