@@ -10,8 +10,10 @@ const EXPERIENCES: Experience[] = [
         startDate: new Date("2025-08-01"),
         endDate: "Present",
         descriptions: [
-            "Assisting clients in enhancing and maintaining existing web applications",
-            "Implementing new features and optimizing system performance based on client requirements",
+            "Reviewed and fixed AI-generated code to ensure quality and maintainability",
+            "Implemented missing features and resolved bugs to improve system reliability",
+            "Worked closely with clients to apply requested changes and enhance application usability",
+            "Tech stack: React, Node.js, TypeScript, PostgreSQL",
         ],
         companyLogo: "",
         projects: [],
