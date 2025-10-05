@@ -223,6 +223,26 @@ const PROJECTS: Record<ProjectName, Project> = {
         projectRole: "individual contributor",
         dockerLink: "https://hub.docker.com/r/ken027/ratelimiter-api",
     },
+    url_shortener_api: {
+        category: "backend",
+        title: "URL Shortener API",
+        thumbnailLink: `${BASE_URL}/images/projects/url-shortener-thumbnail.png`,
+        description:
+            "A TypeScript and Express-based API that shortens URLs, tracks usage, and provides full CRUD and redirect functionality, deployed on Vercel.",
+        technologies: [
+            getSkillByName("typescript", frontend),
+            getSkillByName("node js", backend),
+            getSkillByName("express js", backend),
+            getSkillByName("docker", dev_ops),
+            getSkillByName("postgresql", database),
+            getSkillByName("jest", tools),
+        ],
+        liveDemo: "https://url-shortener-api.ksoftdev.site/api-docs",
+        githubRepo: "https://github.com/ken-027/url-shortener-api",
+        type: "personal",
+        projectRole: "individual contributor",
+        dockerLink: "https://hub.docker.com/r/ken027/url-shortener-api",
+    },
     dashboard: {
         category: "fullstack",
         title: "E-commerce Dashboard",
