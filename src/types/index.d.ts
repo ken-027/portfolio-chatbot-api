@@ -93,7 +93,8 @@ export type ProjectName =
     | "agentic_api"
     | "uptime_monitoring"
     | "ratelimiter_api"
-    | "gradio_apps";
+    | "gradio_apps"
+    | "url_shortener_api";
 
 export interface Service {
     title: string;
