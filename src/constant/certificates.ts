@@ -108,6 +108,30 @@ const CERTIFICATES: Certificate[] = [
     // },
     {
         courseLink:
+            "https://www.udemy.com/share/101WFu3@h9EdiWOLbS4Rv4QrXFhAfvGIIWW1piqDjt--RNLjQ1kDFzkYeJR2rUwMCukNNaQmxQ==",
+        name: "Node JS: Advanced Concepts",
+        platform: "Udemy",
+        dateCompleted: new Date("2025-10-18"),
+        platformLogo: `${BASE_URL}/images/certificates/udemy-logo.png`,
+        status: "completed",
+        skills: [
+            "Node.js",
+            "Express JS",
+            "Javascript",
+            "Jest",
+            "MongoDB",
+            "Redis",
+            "Puppeteer",
+            "Event Loop",
+            "Worker Thread",
+        ],
+        provider: "Stephen Grider",
+        certificateLink:
+            "https://www.udemy.com/certificate/UC-abf3c307-1ca7-4a77-9ded-8078e2af7b3d",
+        certificateImage: `${BASE_URL}/images/certificates/nodejs-advanced-certificate.jpg`,
+    },
+    {
+        courseLink:
             "https://www.udemy.com/share/102VKE3@1hH-HBkaDluXZ2E3EW-PYqh7Bb4REBT2tXJBVqzCJ6QEtEUhecWr5S578p6FyI1mZg==",
         name: "Microservices with Node JS and React",
         platform: "Udemy",
